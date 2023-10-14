@@ -14,22 +14,22 @@ const navLinks = [
   {
     id: 1,
     href: Routes.HOME,
-    label: 'Home',
+    label: 'Головна',
   },
   {
     id: 2,
     href: Routes.ABOUT,
-    label: 'O nas',
+    label: 'Про нас',
   },
   {
     id: 3,
     href: Routes.GALLERY,
-    label: 'Gallery',
+    label: 'Галерея',
   },
   {
     id: 4,
     href: Routes.PRICE,
-    label: 'Cennik',
+    label: 'Прайс',
   },
 ];
 
@@ -134,15 +134,15 @@ export function Navigation() {
             <Icon name="facebook" />
           </motion.a>
           <motion.a
-            className="mr-0 dark:fill-light"
-            href={socialLink.booksy}
+            className="mr-3 dark:fill-light"
+            href={socialLink.google}
             target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <Icon name="booksy" size={100} />
+            <Icon name="gmail" />
           </motion.a>
           <button
             onMouseEnter={handleMouseEnter}
