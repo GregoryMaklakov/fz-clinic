@@ -1,10 +1,10 @@
-# Ginger Beauty Zone
+# FZ Clinic
 
 ### Project description:
 
-This is a website for my wife's beauty salon business in Warsaw.
+This is a website for my friends from Ukraine
 
-- [Instagram](https://www.instagram.com/ginger_beauty_zone/) <br />
+- [Instagram](https://www.instagram.com/fz_clinic/) <br />
 
 ### External Libraries used in this project:
 
