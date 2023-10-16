@@ -8,6 +8,8 @@ export const Routes = {
 export const socialLink = {
   instagram:
     "https://www.instagram.com/fz_clinic/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==",
+  instaSerhii: "https://www.instagram.com/dr.sergey_shandra/",
+  instaKate: "https://www.instagram.com/dr.katerinabella/",
   facebook: "https://www.facebook.com/profile.php?id=100064072295699",
   booksy: "https://gingerbeautyzone.booksy.com",
   booksyKate:
@@ -19,290 +21,305 @@ export const socialLink = {
   booksyMaria:
     "https://booksy.com/pl-pl/162702_ginger-beauty-zone_paznokcie_3_warszawa/staffer/339160#ba_s=dl_1",
   google: "https://maps.app.goo.gl/bwUGE977g4DwBtnp6",
+  googleReview:
+    "https://www.google.com/maps/place/FZ+Clinic/@49.0634867,33.3755835,13z/data=!4m8!3m7!1s0x40d75384a210c489:0x3870699f4e511828!8m2!3d49.06615!4d33.4215049!9m1!1b1!16s%2Fg%2F11n0cm083d?entry=ttu",
 };
 
+// dental price
 export const priceListData = [
+  // Професійна гігієна та відбілювання зубів
   {
     id: 1,
-    name: "Manicure Hybrydowy z Usunięciem Hybrydy",
+    name: "Професійна гігієна та відбілювання зубів",
     items: [
-      { id: 1, name: "Manicure Hybrydowy + Jednolity Kolor", price: 130 },
+      {
+        id: 1,
+        name: "Професійна гігієна порожнини рота І рівня",
+        price: 1000,
+        description:
+          "У вартість входить:скейлінг(зняття твердого зубного каменю),зняття м’якого зубного нальоту системою Air Flow,полірування зубів пастою,рекомендації лікаря по догляду за порожниною рота.",
+      },
       {
         id: 2,
-        name: "Manicure Hybrydowy + Ombre lub BabyBoomer",
-        price: 160,
-      },
-      {
-        id: 3,
-        name: "Manicure Hybrydowy + Zdobienie",
-        price: { min: 150, max: 170 },
-      },
-      { id: 4, name: "Manicure Hybrydowy + French Hybrydą", price: 160 },
-      { id: 5, name: "Utwardzenie Płytki Żelem", price: 20 },
-      {
-        id: 6,
-        name: "Manicure Hybrydowy z Usunięciem + Peeling Rąk",
-        price: 140,
+        name: "Професійна гігієна порожнини рота ІІ рівня",
+        price: 1200,
+        description:
+          "У вартість входить:скейлінг(зняття твердого зубного каменю),зняття м’якого зубного нальоту системою Air Flow,полірування зубів пастою,рекомендації лікаря по догляду за порожниною рота.",
       },
     ],
   },
+  // Лікування карієсу,реставрація зубів
   {
     id: 2,
-    name: "Manicure",
-    items: [
-      { id: 1, name: "Manicure + Odżywka", price: 80 },
-      { id: 2, name: "Manicure z Pomalowaniem Zwykły Lakier", price: 100 },
-      { id: 3, name: "Peeling Rąk + Masaż", price: 25 },
-    ],
-  },
-  {
-    id: 3,
-    name: "Manicure Męski",
-    items: [{ id: 1, name: "Manicure Męski", price: 80 }],
-  },
-  {
-    id: 4,
-    name: "Manicure Hybrydowy Czysta Płytka",
+    name: "Лікування карієсу, реставрація зубів",
     items: [
       {
         id: 1,
-        name: "Czysta Płytka Hybryda + Jednolity Kolor",
-        price: 120,
+        name: "Лікування карієсу I ступеня",
+        price: 1100,
+        description:
+          "У вартість лікування входить: анестезія, ізоляція зуба системою кофердам, препарування каріозної порожнини, відновлення анатомічної форми композитом, полірування реставрації.",
       },
       {
         id: 2,
-        name: "Hybryda + French",
-        price: 150,
+        name: "Лікування карієсу II ступеня",
+        price: 1200,
+        description:
+          "У вартість лікування входить: анестезія, ізоляція зуба системою кофердам, препарування каріозної порожнини, відновлення анатомічної форми композитом, полірування реставрації.",
       },
       {
         id: 3,
-        name: "Manicure hybrydowy + Ombre lub BabyBoomer",
-        price: 150,
+        name: "Лікування карієсу III ступеня",
+        price: 1300,
+        description:
+          "У вартість лікування входить: анестезія, ізоляція зуба системою кофердам, препарування каріозної порожнини, відновлення анатомічної форми композитом, полірування реставрації.",
       },
       {
         id: 4,
-        name: "Manicure hybrydowy + Zdobienie",
-        price: { min: 140, max: 160 },
-      },
-    ],
-  },
-  {
-    id: 5,
-    name: "Przedłużenie Paznokci, Paznokcie Żelowe",
-    items: [
-      {
-        id: 1,
-        name: "Żel na Szablonie + Hybryda Jednolity Kolor",
-        price: 210,
-      },
-      {
-        id: 2,
-        name: "Żel na Szablonie + French Hybryda",
-        price: 250,
-      },
-      {
-        id: 3,
-        name: "Żel na Szablonie + Ombre Hybryda",
-        price: 240,
-      },
-    ],
-  },
-  {
-    id: 6,
-    name: "Uzupełnienie Żelu",
-    items: [
-      {
-        id: 1,
-        name: "Uzupełnienie Żelu + Hybryda Jednolity Kolor",
-        price: 170,
-      },
-      {
-        id: 2,
-        name: "Uzupełnienie Żelu + Ombre",
-        price: 190,
-      },
-      {
-        id: 3,
-        name: "Uzupełnienie Żelu + Zdobienie",
-        price: { min: 190, max: 200 },
-      },
-      {
-        id: 4,
-        name: "Uzupełnienie Żelu + French",
-        price: 190,
-      },
-    ],
-  },
-  {
-    id: 7,
-    name: "Pedicure z pododyskem",
-    items: [
-      {
-        id: 1,
-        name: "Pedicure + Pomalowanie Hybrydą Jednolity Kolor",
-        price: 170,
-      },
-      {
-        id: 2,
-        name: "Pedicure + Odżywka",
-        price: 140,
-      },
-      {
-        id: 3,
-        name: "Pedicure + Zwykły Lakier",
-        price: 150,
-      },
-      {
-        id: 4,
-        name: "Pedicure + French",
-        price: 190,
-      },
-    ],
-  },
-  {
-    id: 8,
-    name: "Pół Pedicure",
-    items: [
-      {
-        id: 1,
-        name: "Pół Pedicure + Hybryda Jednolity Kolor",
-        price: 140,
-      },
-      {
-        id: 2,
-        name: "Pół Pedicure + Zwykły Lakier",
-        price: 120,
-      },
-      {
-        id: 3,
-        name: "Pół Pedicure + French",
-        price: 150,
-      },
-      {
-        id: 4,
-        name: "Pół Pedicure + Odżywka",
-        price: 110,
-      },
-    ],
-  },
-  {
-    id: 9,
-    name: "Ściąganie Hybrydy",
-    items: [
-      {
-        id: 1,
-        name: "Ściąganie Hybrydy + Kształt",
-        price: { min: 50, max: 100 },
-      },
-      {
-        id: 2,
-        name: "Ściąganie Hybrydy z Nóg",
-        price: 30,
-      },
-      {
-        id: 3,
-        name: "Ściąganie Żelu",
-        price: 60,
-      },
-    ],
-  },
-  {
-    id: 10,
-    name: "Brwi i Rzęsy",
-    items: [
-      {
-        id: 1,
-        name: "Regulacja Brwi",
-        price: 30,
-      },
-      {
-        id: 2,
-        name: "Męska regulacja brwi",
-        price: 30,
-      },
-      {
-        id: 3,
-        name: "Regulacja Brwi + Farbkalu",
-        price: 60,
-      },
-      {
-        id: 4,
-        name: "Laminacja brwi + Farbka",
-        price: 120,
+        name: "Відновлення культі зуба",
+        price: 1000,
       },
       {
         id: 5,
-        name: "Laminacja rzęs",
-        price: 120,
+        name: "Непряма керамічна реставрація",
+        price: 3500,
       },
       {
         id: 6,
-        name: "Wąsik",
-        price: 20,
-      },
-      {
-        id: 7,
-        name: "Regulacja brwi + Farbka + Wąsik",
-        price: 80,
+        name: "Реставрація фронтальної групи зубів",
+        price: "1500-2000",
+        description: "Ціни варіюються залежно від кількості зубів.",
       },
     ],
   },
+  // Лікування кореневих каналів зубів(Первинне ендодонтичне лікування)
   {
-    id: 11,
-    name: "Makijaż",
+    id: 3,
+    name: "Лікування кореневих каналів зубів (Первинне ендодонтичне лікування)",
     items: [
       {
         id: 1,
-        name: "Makijaż wieczorowy",
-        price: 190,
+        name: "Первинне ендодонтичне лікування 1-канального зуба",
+        price: 900,
+        description:
+          "У вартість лікування входить: анестезія, ізоляція зуба системою кофердам, препарування, механічна та медикаментозна обробка кореневого каналу, пломбування кореневого каналу, тимчасове відновлення зуба, рентгенконтроль на кожному етапі лікування.",
       },
       {
         id: 2,
-        name: "Makijaż Ślubny",
-        price: 230,
+        name: "Первинне ендодонтичне лікування 2-канального зуба",
+        price: 1000,
       },
       {
         id: 3,
-        name: "Makijaż dzienny",
-        price: 150,
+        name: "Первинне ендодонтичне лікування 3-канального зуба",
+        price: 1300,
       },
       {
         id: 4,
-        name: "Makijaż okazjonalny",
-        price: 150,
+        name: "Первинне ендодонтичне лікування 4-канального зуба",
+        price: 1400,
+      },
+      {
+        id: 5,
+        name: "Встановлення скловолоконного штифта",
+        price: 700,
       },
     ],
   },
-  // Masaż
-  // {
-  //   id: 12,
-  //   name: "Masaż",
-  //   items: [
-  //     {
-  //       id: 1,
-  //       name: "Masaż klasyczny całościowy",
-  //       price: 200,
-  //     },
-  //     {
-  //       id: 2,
-  //       name: "Masaż antycellulitowy modelujący (z bańką)",
-  //       price: 150,
-  //     },
-  //     {
-  //       id: 3,
-  //       name: "Masaż pleców (leczniczy)",
-  //       price: 100,
-  //     },
-  //     {
-  //       id: 4,
-  //       name: "Masaż twarzy",
-  //       price: 150,
-  //     },
-  //     {
-  //       id: 5,
-  //       name: "Masaż antycellulitowy modelujący",
-  //       price: 150,
-  //     },
-  //   ],
-  // },
+  // Лікування кореневих каналів зубів(Повторне)
+  {
+    id: 4,
+    name: "Лікування кореневих каналів зубів (Повторне ендодонтичне лікування)",
+    items: [
+      {
+        id: 1,
+        name: "Повторне ендодонтичне лікування 1-канального зуба",
+        price: 1000,
+        description:
+          "У вартість лікування входить: анестезія, ізоляція зуба системою кофердам, препарування, роспломбування кореневого каналу, механічна та медикаментозна обробка кореневого каналу, пломбування кореневого каналу, тимчасове відновлення зуба, рентгенконтроль на кожному етапі лікування.",
+      },
+      {
+        id: 2,
+        name: "Повторне ендодонтичне лікування 2-канального зуба",
+        price: 1200,
+      },
+      {
+        id: 3,
+        name: "Повторне ендодонтичне лікування 3-канального зуба",
+        price: 1500,
+      },
+      {
+        id: 4,
+        name: "Повторне ендодонтичне лікування 4-канального зуба",
+        price: 1600,
+      },
+      {
+        id: 5,
+        name: "Видалення штифта",
+        price: 500,
+      },
+      {
+        id: 6,
+        name: "Закриття перфорації",
+        price: 600,
+      },
+    ],
+  },
+  // Ортопедичне лікування (Незнімне протезування)
+  {
+    id: 5,
+    name: "Ортопедичне лікування (Незнімне протезування)",
+    items: [
+      {
+        id: 1,
+        name: "Металокерамічна коронка",
+        price: 2800,
+        description:
+          "У вартість лікування входить: 1 візит - анестезія, ізоляція зуба системою кофердам (якщо потрібно), препарування зуба, зняття відбітків, тимчасове відновлення. 2 візит - анестезія, ізоляція зуба системою кофердам, фіксація ортопедичної конструкції, фінішна поліровка.",
+      },
+      {
+        id: 2,
+        name: "Керамічна коронка (Press)",
+        price: 4500,
+      },
+      {
+        id: 3,
+        name: "Керамічна коронка (фрезерована)",
+        price: 6500,
+      },
+      {
+        id: 4,
+        name: "Непряма керамічна реставрація (вкладка)",
+        price: 3500,
+      },
+      {
+        id: 5,
+        name: "Цирконієва коронка",
+        price: 4500,
+      },
+      {
+        id: 6,
+        name: "Вінір керамічний (Emax Press)",
+        price: 7000,
+      },
+      {
+        id: 7,
+        name: "Металокерамічна коронка на імплантаті",
+        price: 4000,
+      },
+      {
+        id: 8,
+        name: "Цирконієва коронка на імплантаті",
+        price: 6000,
+      },
+      {
+        id: 9,
+        name: "Тимчасова коронка (лабораторна)",
+        price: 400,
+      },
+      {
+        id: 10,
+        name: "Зняття коронки",
+        price: 300,
+      },
+    ],
+  },
+  // Ортопедичне лікування (Знімне протезування)
+  {
+    id: 6,
+    name: "Ортопедичне лікування (Знімне протезування)",
+    items: [
+      {
+        id: 1,
+        name: "Знімний протез простий",
+        price: 4000,
+      },
+      {
+        id: 2,
+        name: "Бюгельний протез на нейлоновій основі",
+        price: 6000,
+      },
+      {
+        id: 3,
+        name: "Бюгельний протез на атачменах",
+        price: 10000,
+      },
+    ],
+  },
+  // Хірургічне лікування
+  {
+    id: 7,
+    name: "Хірургічне лікування",
+    items: [
+      {
+        id: 1,
+        name: "Видалення однокореневого зуба",
+        price: 800,
+        description:
+          "У вартість лікування входить: анестезія, використання OptraGate, гемостатична губка, рентгенконтроль (якщо потрібно).",
+      },
+      {
+        id: 2,
+        name: "Видалення багатокореневого зуба",
+        price: 1000,
+      },
+      {
+        id: 3,
+        name: "Видалення зуба мудрості",
+        price: 1200,
+      },
+      {
+        id: 4,
+        name: "Видалення зуба мудрості (напівретинованого)",
+        price: 1500,
+      },
+      {
+        id: 5,
+        name: "Видалення зуба мудрості (ретинованого)",
+        price: 2500,
+      },
+      {
+        id: 6,
+        name: "Накладання швів",
+        price: 300,
+      },
+      {
+        id: 7,
+        name: "Зняття швів",
+        price: 300,
+      },
+      {
+        id: 8,
+        name: "Лікування альвеоліту",
+        price: 500,
+      },
+    ],
+  },
+  // Імланатція зубів
+  {
+    id: 8,
+    name: "Імланатція зубів",
+    items: [
+      {
+        id: 1,
+        name: "Імплантат Neodent (Straumann Group)",
+        price: 10000,
+      },
+      {
+        id: 2,
+        name: "Остеосинтез",
+        price: "від 150$",
+      },
+      {
+        id: 3,
+        name: "Встановлення формувача ясен",
+        price: 2500,
+      },
+      {
+        id: 4,
+        name: "Зняття відбитків під коронку на імплантаті",
+        price: 1000,
+      },
+    ],
+  },
 ];

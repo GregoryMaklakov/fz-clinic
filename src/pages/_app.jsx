@@ -2,7 +2,7 @@ import "../styles/globals.css";
 import PropTypes from 'prop-types';
 import Head from "next/head";
 import Script from 'next/script';
-import { Montserrat } from 'next/font/google';
+import { Nunito } from 'next/font/google';
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from 'next/router';
 import { useMemo, useState } from "react";
@@ -10,7 +10,7 @@ import { CustomCursor, Footer, Navigation } from "../components";
 import { CursorContext, ThemeContext } from '../lib/context';
 import { useThemeSwitcher } from "../hooks/useThemeSwicher";
 
-const montserrat = Montserrat({
+const nunito = Nunito({
   subsets: ["latin"],
   variable: "--font-mont",
 });
@@ -78,7 +78,7 @@ export default function App({ Component, pageProps, }) {
         <ThemeContext.Provider value={contextValue.theme}>
           <CustomCursor />
           <main
-            className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
+            className={`${nunito.variable} font-mont bg-light dark:bg-dark w-full min-h-screen`}
           >
             <Navigation />
             <AnimatePresence mode="wait">

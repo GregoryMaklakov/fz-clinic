@@ -40,8 +40,17 @@ export default function Price() {
   return (
     <>
       <Head>
-        <title>Cennik | Ginger</title>
-        <meta name="description" content="Zapoznaj się z naszym cennikiem na zabiegi kosmetyczne w salonie Ginger Beauty Zone." />
+        <title>FZ Clinic | Прайс</title>
+        <meta name="description" content="Краса та здоров'я разом в FZ Clinic" />
+        <meta property="og:type" content="business.business" />
+        <meta property="og:title" content="Прайс | FZ Clinic" />
+        <meta property="og:url" content="https://ginger-beauty-zone.com" />
+        <meta property="og:image" content="https://d375139ucebi94.cloudfront.net/region2/pl/162702/logo/87abe39eef5d4f5cb4968854db35be-ginger-beauty-zone-logo-0b4580ef172240329bb5c6e7f314b3-booksy.jpeg" />
+        <meta property="og:description" content="Краса та здоров'я разом в FZ Clinic" />
+        <meta property="business:contact_data:street_address" content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600" />
+        <meta property="business:contact_data:locality" content="Kremenchug" />
+        <meta property="business:contact_data:postal_code" content="39600" />
+        <meta property="business:contact_data:country_name" content="Ukraine" />
       </Head>
       <TransitionPageEffect />
       <section className="flex w-full flex-col items-center justify-center">
@@ -74,7 +83,7 @@ export default function Price() {
                     onMouseLeave={handleMouseLeave}
                     className={`${isHoveringText ? "text-dark bg-transparent dark:bg-transparent dark:text-light" : "text-dark dark:bg-transparent dark:text-light"
                       } !text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm`}
-                    text={`W naszym salonie zawsze obowiązuje system zbierania punktów rabatowych. Za każdą ósmą usługę otrzymujesz ${30} % zniżki`}
+                    text={`Отримайте ${10}% знижку на наші послуги під час вашого першого візиту до нашої клініки!`}
                   />
                 )}
               </CursorContext.Consumer>
@@ -82,7 +91,7 @@ export default function Price() {
           </FrameWhiteBlack>
           <h2
             className="inline-block w-full font-bold capitalize text-8xl text-dark dark:bg-dark dark:text-light text-center xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
-          >Nasze ceny</h2>
+          >Наші ціни</h2>
           <PriceList />
           <div className="grid place-content-center">
             <AnimatedLink
@@ -142,7 +151,7 @@ function Category({ name, items }) {
         transition={{ duration: 1, type: 'spring', delay: 0.1 }}
         className="flex flex-col items-center justify-center mb-16 xl:pl-28 xl:items-start sm:pl-12"
       >
-        <h3 className="font-bold capitalise text-2xl mb-6 dark:text-light/75 xl:text-xl">
+        <h3 className="font-bold max-w-lg text-center capitalize text-2xl mb-6 dark:text-light/75 xl:text-xl">
           {name}
         </h3>
         <ul className="w-[60%] xl:w-full ">
@@ -169,11 +178,11 @@ function PriceItem({ name, price }) {
         </p>
         {typeof price === 'object' ? (
           <span className="capitalize text-primary font-bold xs:text-xs xs:text-right">
-            {price.min}-{price.max} zl
+            {price.min}-{price.max} UAH
           </span>
         ) : (
           <span className="capitalize text-primary font-bold xs:text-xs xs:text-right">
-            {price} zl
+            {price} UAH
           </span>
         )}
       </div>

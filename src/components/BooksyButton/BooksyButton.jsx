@@ -21,7 +21,7 @@ export function BooksyButton({ className }) {
 					target="_blank"
 				>
 					<span className="flex items-center justify-center text-center leading-5 md:text-xs">
-						Umów
+						Запис
 					</span>
 				</Link>
 			</div>

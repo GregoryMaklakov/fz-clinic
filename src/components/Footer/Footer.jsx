@@ -19,16 +19,16 @@ export function Footer() {
                 <span>{new Date().getFullYear()} &copy; All Rights Reserved.</span>
                 <div>
                     <Link
-                        href={socialLink.booksy}
+                        href={socialLink.googleReview}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         target="_blank" className='flex items-center xs:text-sm'
-                    >Dodaj do ulubionych <span className='text-primary text-2xl px-1 dark:text-primaryDark'> &#9825; </span> w <span className='underline underline-offset-2 px-1'>Booksy</span></Link>
+                    >Залиш відгук <span className='text-primary text-2xl px-1 dark:text-primaryDark'> &#9825; </span> в <span className='underline underline-offset-2 px-1'>Google</span></Link>
                 </div>
                 <Link href={socialLink.google}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
-                    target="_blank"><span className='underline underline-offset-2 xs:text-sm' >Grochowska 278</span> | Warszawa</Link>
+                    target="_blank"><span className='underline underline-offset-2 xs:text-sm' >Першотравнева 51</span> | Кременчук</Link>
             </Layout>
         </footer>
     )

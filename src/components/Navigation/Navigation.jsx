@@ -24,7 +24,7 @@ const navLinks = [
   {
     id: 3,
     href: Routes.GALLERY,
-    label: 'Галерея',
+    label: 'Послуги',
   },
   {
     id: 4,

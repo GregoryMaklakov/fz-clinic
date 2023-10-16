@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
 import { CursorContext, ThemeContext } from '../lib/context';
 import HeroArtDark from "../../public/images/profile/heroDark.webp";
+import DentalHero from "../../public/images/profile/dentalHero.png";
 import HeroArtLight from "../../public/images/profile/heroLight.webp";
 import {
   Layout,
@@ -36,13 +37,13 @@ export default function Home() {
         <title>FZ Clinic</title>
         <meta name="description" content="Краса та здоров'я разом в FZ Clinic" />
         <meta property="og:type" content="business.business" />
-        <meta property="og:title" content="Ginger Beauty Zone" />
+        <meta property="og:title" content="FZ Clinic" />
         <meta property="og:url" content="https://ginger-beauty-zone.com" />
         <meta property="og:image" content="https://d375139ucebi94.cloudfront.net/region2/pl/162702/logo/87abe39eef5d4f5cb4968854db35be-ginger-beauty-zone-logo-0b4580ef172240329bb5c6e7f314b3-booksy.jpeg" />
-        <meta property="og:description" content="Teren Twojego Piękna" />
-        <meta property="business:contact_data:street_address" content="278 Grochowska" />
+        <meta property="og:description" content="Краса та здоров'я разом в FZ Clinic" />
+        <meta property="business:contact_data:street_address" content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600" />
         <meta property="business:contact_data:locality" content="Kremenchug" />
-        <meta property="business:contact_data:postal_code" content="03-841" />
+        <meta property="business:contact_data:postal_code" content="39600" />
         <meta property="business:contact_data:country_name" content="Ukraine" />
       </Head>
 
@@ -52,8 +53,18 @@ export default function Home() {
           <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
             <div className="w-full flex items-center justify-between lg:flex-col">
               <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full md:mb-6">
-                <Image
+                {/* <Image
                   src={heroArtSource}
+                  alt="Beauty woman in the shadow"
+                  loading="lazy"
+                  placeholder="blur"
+                  sizes="(max-width: 768px) 100vw,
+                (max-width: 1200px) 50vw,
+                50vw"
+                  className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full "
+                /> */}
+                <Image
+                  src={DentalHero}
                   alt="Beauty woman in the shadow"
                   loading="lazy"
                   placeholder="blur"
@@ -80,16 +91,16 @@ export default function Home() {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                    Odbierz zniżkę 20%
+                    Отримай знижку 20%
                     <Icon name="linkArrow" size={24} className="ml-2" />
                   </Link>
                   <Link
                     className="flex items-center text-dark ml-4 font-medium capitalize underline text-lg dark:text-light"
-                    href="tel:48510001772"
+                    href="tel:380987775580"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                    Zadzwoń
+                    Зателефонувати
                   </Link>
                 </div>
               </div>
