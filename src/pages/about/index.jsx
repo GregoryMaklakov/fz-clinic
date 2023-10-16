@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   AnimatedText,
@@ -13,7 +12,6 @@ import {
 } from '../../components';
 import BlackLady from '../../../public/ginger/images/black-lady.webp';
 import KateImage from '../../../public/ginger/images/KateDark22.png';
-import LizaImage from '../../../public/ginger/images/liza.png';
 
 import { socialLink } from '../../lib/constant';
 

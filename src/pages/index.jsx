@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
 import { CursorContext, ThemeContext } from '../lib/context';
 import HeroArtDark from "../../public/images/profile/heroDark.webp";
-import DentalHero from "../../public/images/profile/dentalHero.png";
+import DentalHero from "../../public/images/articles/article-01.webp";
 import HeroArtLight from "../../public/images/profile/heroLight.webp";
 import {
   Layout,
@@ -76,7 +76,7 @@ export default function Home() {
               </div>
               <div className="w-1/2 flex flex-col items-center self-center lg:w-full">
                 <AnimatedText
-                  text="Краса та здоров'я разом в FZ Clinic"
+                  text="Краса та здоров'я разом з FZ Clinic"
                   className="!text-6xl text-left xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
                 />
                 <p className="my-4 text-base font-medium lg:text-center text-dark dark:text-light">

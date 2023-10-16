@@ -29,10 +29,10 @@ export function Logo() {
                         onMouseLeave={handleMouseLeave}
                         aria-label="Ginger Beauty Zone Warszawa" href='/'
                         className={`${isHoveringLogo ? "bg-dark dark:bg-light" : "dark:bg-dark"
-                            } w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full`}
+                            } w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full text-2xl font-bold`}
                         whileHover={animLink}
                     >
-                        <LogoImage size={44} color="white" />
+                        FZ
                     </MotionLink>
                 )}
             </CursorContext.Consumer>

@@ -23,7 +23,7 @@ const navLinks = [
   },
   {
     id: 3,
-    href: Routes.GALLERY,
+    href: Routes.ARTICLES,
     label: 'Послуги',
   },
   {
