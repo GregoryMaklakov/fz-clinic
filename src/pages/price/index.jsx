@@ -93,7 +93,7 @@ export default function Price() {
             className="inline-block w-full font-bold capitalize text-8xl text-dark dark:bg-dark dark:text-light text-center xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
           >Наші ціни</h2>
           <PriceList />
-          <div className="grid place-content-center">
+          {/* <div className="grid place-content-center">
             <AnimatedLink
               className="inline-flex"
               href={socialLink.booksy}
@@ -105,7 +105,7 @@ export default function Price() {
             >
               <Icon name="booksy" size={140} color='#B63E96' />
             </AnimatedLink>
-          </div>
+          </div> */}
           <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
         </Layout>
       </section >
