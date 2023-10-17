@@ -2,10 +2,22 @@ import Link from "next/link";
 import Image from "next/image";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const FramerArticleImage = motion(Image);
 
 export function ArticleCard({ image, title, time, link, subtitle }) {
+  const [isHovered, setIsHovered] = useState(false);
+  const imageVariants = {
+    rest: {
+      filter: "grayscale(100%)",
+      transition: { type: "tween" },
+    },
+    hover: {
+      filter: "grayscale(0%)",
+      transition: { type: "tween" },
+    },
+  };
   return (
     <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
       <Link
@@ -19,12 +31,15 @@ export function ArticleCard({ image, title, time, link, subtitle }) {
           height={400}
           className="w-full"
           loading="lazy"
-          // placeholder="blur"
-          sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                50vw"
+          sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
+          initial={isHovered ? "hover" : "rest"}
+          animate={isHovered ? "hover" : "rest"}
+          variants={imageVariants}
+          custom={isHovered}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         />
       </Link>
       <Link
