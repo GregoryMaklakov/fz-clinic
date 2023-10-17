@@ -52,7 +52,7 @@ export default function Articles({ summary }) {
                 <Layout className="w-full max-w-[1920px] mx-auto h-full bg-light dark:bg-dark inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 py-10">
                     <AnimatedText text="Дізнайтесь більше про наші послуги!"
                         className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12" />
-                    <ul className="grid grid-cols-2 gap-16 mb-16">
+                    <ul className="grid grid-cols-2 gap-16 mb-16 md:grid-cols-1">
                         {articles.map((article) => (
                             <ArticleCard
                                 key={article.slug}
@@ -60,6 +60,7 @@ export default function Articles({ summary }) {
                                 subtitle={article.subtitle}
                                 image={article.imgURL}
                                 summary={summary}
+                                time={article.time}
                                 link={`/articles/${article.slug}`}
                             />
                         ))}

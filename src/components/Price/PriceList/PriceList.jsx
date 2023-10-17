@@ -20,7 +20,7 @@ export function Category({ name, items }) {
                 </h3>
                 <ul className="w-[60%] xl:w-full ">
                     {items.map(item => (
-                        <PriceItem key={item.id} name={item.name} price={item.price} />
+                        <PriceItem key={item.id} name={item.name} price={item.price} description={item.description} />
                     ))}
                 </ul>
             </motion.div>

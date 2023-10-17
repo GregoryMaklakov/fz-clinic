@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
 import { CursorContext, ThemeContext } from '../lib/context';
-import HeroArtDark from "../../public/images/home/heroDark.jpeg";
+import HeroArtDark from "../../public/images/home/heroDark.png";
 import HeroArtLight from "../../public/images/home/heroLight.jpeg"
 import {
   Layout,
@@ -62,16 +62,6 @@ export default function Home() {
                 50vw"
                   className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full "
                 />
-                {/* <Image
-                  src={HeroArtDark}
-                  alt="Beauty woman in the shadow"
-                  loading="lazy"
-                  placeholder="blur"
-                  sizes="(max-width: 768px) 100vw,
-                (max-width: 1200px) 50vw,
-                50vw"
-                  className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full "
-                /> */}
               </div>
               <div className="w-1/2 flex flex-col items-center self-center lg:w-full">
                 <AnimatedText
