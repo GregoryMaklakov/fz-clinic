@@ -3,9 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
 import { CursorContext, ThemeContext } from '../lib/context';
-import HeroArtDark from "../../public/images/profile/heroDark.webp";
-import DentalHero from "../../public/images/articles/article-01.webp";
-import HeroArtLight from "../../public/images/profile/heroLight.webp";
+import HeroArtDark from "../../public/images/home/heroDark.jpeg";
+import HeroArtLight from "../../public/images/home/heroLight.jpeg"
 import {
   Layout,
   AnimatedText,
@@ -53,7 +52,7 @@ export default function Home() {
           <Layout className="pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
             <div className="w-full flex items-center justify-between lg:flex-col">
               <div className="w-1/2 -top-[30px] p-14 lg:p-0  md:w-full md:mb-6">
-                {/* <Image
+                <Image
                   src={heroArtSource}
                   alt="Beauty woman in the shadow"
                   loading="lazy"
@@ -62,9 +61,9 @@ export default function Home() {
                 (max-width: 1200px) 50vw,
                 50vw"
                   className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full "
-                /> */}
-                <Image
-                  src={DentalHero}
+                />
+                {/* <Image
+                  src={HeroArtDark}
                   alt="Beauty woman in the shadow"
                   loading="lazy"
                   placeholder="blur"
@@ -72,7 +71,7 @@ export default function Home() {
                 (max-width: 1200px) 50vw,
                 50vw"
                   className="flex items-center justify-center rounded-md lg:hidden z-10 md:inline-block md:w-full "
-                />
+                /> */}
               </div>
               <div className="w-1/2 flex flex-col items-center self-center lg:w-full">
                 <AnimatedText

@@ -10,8 +10,10 @@ import {
   TransitionPageEffect,
   Icon,
 } from '../../components';
-import BlackLady from '../../../public/ginger/images/black-lady.webp';
-import KateImage from '../../../public/ginger/images/KateDark22.png';
+import AboutAbout from '../../../public/images/about/about-about.jpeg';
+import AboutKate from '../../../public/images/about/about-kate.jpeg';
+import AboutSerhii from '../../../public/images/about/about-serhii.jpeg';
+
 
 import { socialLink } from '../../lib/constant';
 
@@ -82,7 +84,7 @@ export default function About() {
 
             <FrameWhiteBlack className="col-span-3 xl:col-span-4 min-h-full md:order-1 md:col-span-8 md:min-h-[450px]">
               <Image
-                src={BlackLady}
+                src={AboutAbout}
                 alt="BlackLady"
                 className="absolurte -z-1 p-2 rounded-2xl w-full h-auto"
                 style={{ objectFit: 'cover' }}
@@ -93,7 +95,7 @@ export default function About() {
             </FrameWhiteBlack>
             <div className="col-span-2 xl:col-span-8 xl:flex-row xl:items-center flex flex-col items-end justify-between h-full md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center ">
-                <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
+                <span className="inline-block text-7xl font-bold dark:text-light/75 lg:text-4xl xs:text-2xl">
                   <AnimatedValue value={1280} className="dark:text-light/75 " />+
                 </span>
                 <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 lg:text-center xs:text-xs xs:mr-1">
@@ -101,7 +103,7 @@ export default function About() {
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center  xl:items-center">
-                <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
+                <span className="inline-block text-7xl font-bold dark:text-light/75 lg:text-4xl xs:text-2xl">
                   <AnimatedValue
                     value={daysSince}
                     className="dark:text-light/75"
@@ -112,7 +114,7 @@ export default function About() {
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center  xl:items-center">
-                <span className="inline-block text-7xl font-bold dark:text-light/75 md:text-4xl xs:text-2xl">
+                <span className="inline-block text-7xl font-bold dark:text-light/75 lg:text-4xl xs:text-2xl">
                   <AnimatedValue value={12} className="dark:text-light/75" /> +
                 </span>
                 <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 lg:text-center xs:text-xs xs:mr-1">
@@ -131,12 +133,12 @@ export default function About() {
             </motion.h3>
             <div className="flex flex-wrap gap-16 items-center justify-center w-full my-16">
               <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
+                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
                   <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
-                      src={KateImage}
-                      alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
+                      src={AboutSerhii}
+                      alt="AboutSerhii"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
                     />
                   </div>
                   <div className='w-full flex items-center justify-center min-h-[84px]'>
@@ -149,12 +151,11 @@ export default function About() {
                       </h5>
                     </div>
                     <motion.a
-                      className="mr-3 dark:fill-light"
+                      className="dark:fill-light"
                       href={socialLink.instaSerhii}
                       target="_blank"
                       whileHover={{ y: -2 }}
                       whileTap={{ scale: 0.9 }}
-
                     >
                       <Icon name="insta" />
                     </motion.a>
@@ -163,12 +164,12 @@ export default function About() {
               </motion.div>
 
               <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-[444px] overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
+                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
                   <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
-                      src={KateImage}
-                      alt="KateImage"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover sm:max-w-full z-10 relative"
+                      src={AboutKate}
+                      alt="AboutKate"
+                      className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
                     />
                   </div>
                   <div className='w-full flex items-center justify-center min-h-[84px]'>
@@ -181,7 +182,7 @@ export default function About() {
                       </h5>
                     </div>
                     <motion.a
-                      className="mr-3 dark:fill-light"
+                      className="dark:fill-light"
                       href={socialLink.instaKate}
                       target="_blank"
                       whileHover={{ y: -2 }}

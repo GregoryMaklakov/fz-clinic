@@ -70,6 +70,17 @@ export const socialLink = {
 export const priceListData = [
   // Професійна гігієна та відбілювання зубів
   {
+    id: 0,
+    name: "",
+    items: [
+      {
+        id: 1,
+        name: "Консультація",
+        price: 300,
+      },
+    ],
+  },
+  {
     id: 1,
     name: "Професійна гігієна та відбілювання зубів",
     items: [
