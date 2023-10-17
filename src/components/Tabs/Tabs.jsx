@@ -13,13 +13,13 @@ export function Tabs({ items }) {
     <div className="flex justify-center items-center py-12">
       <div className="flex flex-col gap-y-2 w-full">
         <div className="flex items-center self-start mt-2 lg:self-center sm:flex-col gap-4 w-full">
-          {items.map((item, index) => (
+          {items.map((item) => (
             <button
               type="button"
-              ref={index === 0 ? firstBtnRef : null}
-              key={index}
-              onClick={() => setSelectedTab(index)}
-              className={`flex w-[50%] items-center bg-dark text-light p-4 px-6 rounded-lg text-xl font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4} `}
+              ref={item.title === items[0].title ? firstBtnRef : null}
+              key={item.title}
+              onClick={() => setSelectedTab(item.title)}
+              className="flex w-[50%] items-center bg-dark text-light p-4 px-6 rounded-lg text-xl font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4"
             >
               {item.title}
             </button>

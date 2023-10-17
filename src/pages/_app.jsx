@@ -1,7 +1,6 @@
 import "../styles/globals.css";
 import PropTypes from 'prop-types';
 import Head from "next/head";
-import Script from 'next/script';
 import { Nunito } from 'next/font/google';
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from 'next/router';
@@ -23,16 +22,6 @@ export default function App({ Component, pageProps, }) {
   const [isHoveringImage, setIsHoveringImage] = useState(false);
   const [mode, setMode] = useThemeSwitcher();
 
-  // Google Analytics
-  // <!-- Google tag (gtag.js) -->
-  // <script async src="https://www.googletagmanager.com/gtag/js?id=G-FEZ3384TFD"></script>
-  // <script>
-  //   window.dataLayer = window.dataLayer || [];
-  //   function gtag(){dataLayer.push(arguments);}
-  //   gtag('js', new Date());
-
-  //   gtag('config', 'G-FEZ3384TFD');
-  // </script>
 
   const contextValue = useMemo(
     () => ({
@@ -59,21 +48,6 @@ export default function App({ Component, pageProps, }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script
-        srtategy="lazyOnload"
-        src="https://www.googletagmanager.com/gtag/js?id=G-FEZ3384TFD"
-      />
-      <Script
-        id="googleAn"
-        srtategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-          
-            gtag('config', 'G-FEZ3384TFD');`
-        }
-      </Script>
       <CursorContext.Provider value={contextValue.cursor}>
         <ThemeContext.Provider value={contextValue.theme}>
           <CustomCursor />
