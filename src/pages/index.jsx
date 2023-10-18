@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
 import { CursorContext, ThemeContext } from '../lib/context';
 import HeroArtDark from "../../public/images/home/heroDark.png";
-import HeroArtLight from "../../public/images/home/heroLight.jpeg"
+import HeroArtLight from "../../public/images/home/heroDark01.png"
 import {
   Layout,
   AnimatedText,

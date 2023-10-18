@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { FrameWhiteBlack, Layout, TransitionPageEffect } from '../../components';
+import Head from 'next/head';
+import { FrameWhiteBlack, Layout } from '../../components';
 import { articles } from '../../lib/constant';
 
 function ArticlePage() {
@@ -18,8 +19,19 @@ function ArticlePage() {
 
     return (
         <>
-            {/* head */}
-            <TransitionPageEffect />
+            <Head>
+                <title>FZ Clinic | Послуги</title>
+                <meta name="description" content="Краса та здоров'я разом в FZ Clinic" />
+                <meta property="og:type" content="business.business" />
+                <meta property="og:title" content="Про нас | FZ Clinic" />
+                <meta property="og:url" content="https://ginger-beauty-zone.com" />
+                <meta property="og:image" content="https://d375139ucebi94.cloudfront.net/region2/pl/162702/logo/87abe39eef5d4f5cb4968854db35be-ginger-beauty-zone-logo-0b4580ef172240329bb5c6e7f314b3-booksy.jpeg" />
+                <meta property="og:description" content="Краса та здоров'я разом в FZ Clinic" />
+                <meta property="business:contact_data:street_address" content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600" />
+                <meta property="business:contact_data:locality" content="Kremenchug" />
+                <meta property="business:contact_data:postal_code" content="39600" />
+                <meta property="business:contact_data:country_name" content="Ukraine" />
+            </Head>
             <section className="flex w-full flex-col items-center justify-center dark:text-light">
 
                 <Layout className="pt-8">

@@ -20,7 +20,7 @@ export function BooksyButton({ className }) {
 					target="_blank"
 				>
 					<span className="flex items-center justify-center text-center">
-						<Icon name="phone" className="lg:w-[24px] lg:h-[24px]" />
+						<Icon name="phone" className="lg:w-[24px] lg:h-[24px] fill-light dark:fill-dark" />
 					</span>
 				</Link>
 			</div>
