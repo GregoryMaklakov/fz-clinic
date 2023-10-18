@@ -19,9 +19,9 @@ export function ArticleCard({ image, title, time, link, subtitle }) {
     },
   };
   return (
-    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl">
+    <li className="col-span-1 w-full p-4 bg-light border border-solid border-dark rounded-2xl relative">
       <Link
-        className="w-ful inline-block cursor-pointer overflow-hidden rounded-lg"
+        className="w-ful inline-block cursor-pointer overflow-hidden rounded-lg "
         href={link}
       >
         <FramerArticleImage
@@ -50,8 +50,8 @@ export function ArticleCard({ image, title, time, link, subtitle }) {
           {title}
         </h2>
       </Link>
-      <p className="text-sm mb-2">{subtitle}</p>
-      <span className="text-primary font-semibold">{time}</span>
+      <p className="text-sm mb-8">{subtitle}</p>
+      <span className="text-primary font-semibold absolute left-4 bottom-4">{time}</span>
     </li>
   );
 }

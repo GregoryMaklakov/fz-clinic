@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Head from 'next/head';
-import { FrameWhiteBlack, Layout } from '../../components';
+import { FrameWhiteBlack, Layout, TransitionPageEffect } from '../../components';
 import { articles } from '../../lib/constant';
 
 function ArticlePage() {
@@ -32,36 +32,19 @@ function ArticlePage() {
                 <meta property="business:contact_data:postal_code" content="39600" />
                 <meta property="business:contact_data:country_name" content="Ukraine" />
             </Head>
+            <TransitionPageEffect />
             <section className="flex w-full flex-col items-center justify-center dark:text-light">
-
                 <Layout className="pt-8">
                     <h1
                         className="w-full mx-auto py-2 flex items-center justify-center text-center sm:py-0 font-bold capitalize text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-16"
                     >{article.title}</h1>
                     <div className="grid w-full grid-cols-8 gap-16 lg:gap-6 sm:gap-8 items-center">
                         <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
-                            <p className="my-4 font-medium">
-                                {article.text_01}
-                            </p>
-                            <p className="my-4 font-medium">
-                                {article.text_02}
-                            </p>
-                            <p className="my-4 font-medium">
-                                {article.text_03}
-                            </p>
-                            <p className="my-4 font-medium">
-                                {article.text_04}
-                            </p>
-                            {article.text_05 &&
-                                (<p className="my-4 font-medium">
-                                    {article.text_05}
+                            {article.text.map((text) => (
+                                <p key={text.id} className="my-4 font-medium">
+                                    {text}
                                 </p>
-                                )}
-                            {article.text_06 &&
-                                (<p className="my-4 font-medium">
-                                    {article.text_06}
-                                </p>
-                                )}
+                            ))}
                         </div>
                         <FrameWhiteBlack className="col-span-4 min-h-full xl:col-span-4 md:order-1 lg:col-span-8 h-auto lg:min-h-[450px]">
                             <Image

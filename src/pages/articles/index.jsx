@@ -2,33 +2,6 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import { AnimatedText, Layout, TransitionPageEffect, ArticleCard } from "../../components";
 import { articles } from "../../lib/constant";
-// import { Tabs } from "../../components/Tabs";
-
-// const items = [
-//     {
-//         title: 'Cтоматологія',
-//         content: (
-//             <div className='border-2 border-blue-400 rounded-lg p-4'>
-//                 <h1 className='text-3xl text-blue-600'>Title 1</h1>
-//                 <p>
-//                     стоматологія
-//                 </p>
-//             </div>
-//         ),
-//     },
-//     {
-//         title: 'Косметологія',
-//         content: (
-//             <div className='border-2 border-blue-400 rounded-lg p-4'>
-//                 <h1 className='text-3xl text-blue-600'>Title 2</h1>
-//                 <p>
-//                     косметологія
-//                 </p>
-//             </div>
-//         ),
-//     },
-
-// ];
 
 
 export default function Articles({ summary }) {
@@ -65,7 +38,6 @@ export default function Articles({ summary }) {
                             />
                         ))}
                     </ul>
-                    {/* <Tabs items={items} /> */}
                 </Layout>
             </main>
         </>

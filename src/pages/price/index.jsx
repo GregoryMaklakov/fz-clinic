@@ -12,9 +12,11 @@ import {
   GingerButton,
   Layout,
   TransitionPageEffect,
+  Tabs,
   PriceList,
 } from '../../components';
 import HeroPrice from '../../../public/images/price/hero.jpg';
+import { priceDental } from '../../lib/constant';
 
 export default function Price() {
   const { setHoveringText } = useContext(CursorContext);
@@ -25,6 +27,25 @@ export default function Price() {
   const handleMouseLeave = () => {
     setHoveringText(false);
   };
+
+  const items = [
+    {
+      title: 'Cтоматологія',
+      content: (
+        <div className='p-4'>
+          <PriceList categories={priceDental} />
+        </div>
+      ),
+    },
+    {
+      title: 'Косметологія',
+      content: (
+        <div className='p-4'>
+          <PriceList categories={priceDental} />
+        </div>
+      ),
+    },
+  ];
 
   return (
     <>
@@ -81,7 +102,7 @@ export default function Price() {
           <h2
             className="inline-block w-full font-bold capitalize text-8xl text-dark dark:bg-dark dark:text-light text-center xl:!text-4xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
           >Наші ціни</h2>
-          <PriceList />
+          <Tabs items={items} />
           <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
         </Layout>
       </section >

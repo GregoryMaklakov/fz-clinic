@@ -12,23 +12,29 @@ export function Tabs({ items }) {
   return (
     <div className="flex justify-center items-center py-12">
       <div className="flex flex-col gap-y-2 w-full">
-        <div className="flex items-center self-start mt-2 lg:self-center sm:flex-col gap-4 w-full">
-          {items.map((item) => (
+        <div className="flex items-center self-start mt-2 lg:self-center sm:flex-col gap-4 sm:gap-0 w-full">
+          {items.map((item, index) => (
             <button
               type="button"
-              ref={item.title === items[0].title ? firstBtnRef : null}
+              ref={index === 0 ? firstBtnRef : null}
               key={item.title}
-              onClick={() => setSelectedTab(item.title)}
-              className="flex w-[50%] items-center bg-dark text-light p-4 px-6 rounded-lg text-xl font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4"
+              onClick={() => setSelectedTab(index)}
+              className={`flex w-[50%] sm:w-full items-center justify-center bg-dark text-light p-4 px-6 rounded-lg text-xl font-bold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 ${selectedTab === index
+                ? "dark:text-dark border-dark dark:bg-dark underline "
+                : ""
+                } `}
             >
               {item.title}
             </button>
           ))}
         </div>
 
-        <div className="bg-white p-2 rounded-xl">
+        <div className="">
           {items.map((item, index) => (
-            <div className={`${selectedTab === index ? "" : "hidden"}`}>
+            <div
+              className={`${selectedTab === index ? "" : "hidden"}`}
+              key={item.index}
+            >
               {item.content}
             </div>
           ))}
@@ -39,5 +45,10 @@ export function Tabs({ items }) {
 }
 
 Tabs.propTypes = {
-  items: PropTypes.string,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      content: PropTypes.node,
+    }),
+  ),
 };

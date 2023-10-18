@@ -4,7 +4,7 @@ export function PriceItem({ name, price, description }) {
     return (
         <li>
             <div className="flex items-center justify-between w-full mb-2">
-                <div className='flex flex-col max-w-[85%]'>
+                <div className='flex flex-col max-w-[82%]'>
                     <p className="font-medium w-full dark:text-light md:text-sm xs:text-xs xs:max-w-[220px] line-clamp-1">
                         {name}
                     </p>

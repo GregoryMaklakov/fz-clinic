@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState, useEffect } from 'react';
 import { CursorContext, ThemeContext } from '../lib/context';
-import HeroArtDark from "../../public/images/home/heroDark.png";
-import HeroArtLight from "../../public/images/home/heroDark01.png"
+import HeroArtDark from "../../public/images/home/heroDark01.jpeg";
+import HeroArtLight from "../../public/images/home/heroDark.jpeg";
 import {
   Layout,
   AnimatedText,
@@ -117,7 +117,7 @@ export default function Home() {
 //   };
 
 //   useEffect(() => {
-//     setHeroArtSource(mode === 'dark' ? HeroArtDark : HeroArtLight);
+//     setHeroArtSource(mode === 'dark' ? HeroArtDark : HeroArtDark);
 //   }, [mode])
 
 //   return (
