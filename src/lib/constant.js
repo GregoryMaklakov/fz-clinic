@@ -1,4 +1,3 @@
-import Link from "next/link";
 import article01 from "../../public/images/articles/article-01.webp";
 import article02 from "../../public/images/articles/article-02.webp";
 import article03 from "../../public/images/articles/article-03.webp";
