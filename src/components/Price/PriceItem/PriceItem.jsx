@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-export function PriceItem({ name, price, description }) {
+export function PriceItem({ name, price, description, priceUsd }) {
     return (
         <li>
             <div className="flex items-center justify-between w-full mb-2">
@@ -20,7 +20,11 @@ export function PriceItem({ name, price, description }) {
                     </span>
                 ) : (
                     <span className="capitalize text-primary font-bold xs:text-xs xs:text-right">
-                        {price} UAH
+                        {priceUsd !== undefined && priceUsd !== null ? (
+                            `${priceUsd} $`
+                        ) : (
+                            `${price} UAH`
+                        )}
                     </span>
                 )}
             </div>
@@ -31,6 +35,13 @@ export function PriceItem({ name, price, description }) {
 PriceItem.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string,
+    priceUsd: PropTypes.oneOfType([
+        PropTypes.number.isRequired,
+        PropTypes.shape({
+            min: PropTypes.number.isRequired,
+            max: PropTypes.number.isRequired,
+        }).isRequired,
+    ]),
     price: PropTypes.oneOfType([
         PropTypes.number.isRequired,
         PropTypes.shape({

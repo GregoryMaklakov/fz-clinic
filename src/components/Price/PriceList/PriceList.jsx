@@ -18,7 +18,7 @@ export function PriceList({ categories }) {
                     className="absolute t-0 left-9 sm:left-4 w-[4px] h-full bg-dark origin-top dark:bg-primaryDark dark:shadow-3xl"
                 />
                 {categories.map((category) => (
-                    <Category key={category.id} name={category.name} items={category.items} />
+                    <Category key={category.id} {...category} />
                 ))}
             </div>
         </div>

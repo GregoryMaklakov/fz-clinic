@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from "react";
+import Head from "next/head";
+import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   AnimatedText,
   AnimatedValue,
@@ -9,19 +9,18 @@ import {
   FrameWhiteBlack,
   TransitionPageEffect,
   Icon,
-} from '../../components';
-import AboutAbout from '../../../public/images/about/about-about.jpeg';
-import AboutKate from '../../../public/images/about/about-kate.jpeg';
-import AboutSerhii from '../../../public/images/about/about-serhii.jpeg';
+} from "../../components";
+import AboutAbout from "../../../public/images/about/about-about.jpeg";
+import AboutKate from "../../../public/images/about/about-kate.jpeg";
+import AboutSerhii from "../../../public/images/about/about-serhii.jpeg";
 
-
-import { socialLink } from '../../lib/constant';
+import { socialLink } from "../../lib/constant";
 
 export default function About() {
   const [daysSince, setDaysSince] = useState(0);
 
   useEffect(() => {
-    const decemberSecond = new Date('January 08, 2021');
+    const decemberSecond = new Date("January 08, 2021");
     const today = new Date();
     const timeDiff = Math.abs(today.getTime() - decemberSecond.getTime());
     const daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
@@ -31,14 +30,14 @@ export default function About() {
   const motionSettings = {
     initial: { y: 50 },
     whileInView: { y: 0 },
-    transition: { duration: 1, type: 'spring', delay: 0.1 },
+    transition: { duration: 1, type: "spring", delay: 0.1 },
     viewport: { once: true },
   };
 
   const motionFrameWhiteBlack = {
     initial: { opacity: 0, y: 50 },
     whileInView: { opacity: 1, y: 0 },
-    transition: { duration: 1, type: 'spring', delay: 0.1 },
+    transition: { duration: 1, type: "spring", delay: 0.1 },
     viewport: { once: true },
   };
 
@@ -46,13 +45,25 @@ export default function About() {
     <>
       <Head>
         <title>FZ Clinic | Про нас</title>
-        <meta name="description" content="Краса та здоров'я разом в FZ Clinic" />
+        <meta
+          name="description"
+          content="Краса та здоров'я разом в FZ Clinic"
+        />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content="Про нас | FZ Clinic" />
         <meta property="og:url" content="https://ginger-beauty-zone.com" />
-        <meta property="og:image" content="https://d375139ucebi94.cloudfront.net/region2/pl/162702/logo/87abe39eef5d4f5cb4968854db35be-ginger-beauty-zone-logo-0b4580ef172240329bb5c6e7f314b3-booksy.jpeg" />
-        <meta property="og:description" content="Краса та здоров'я разом в FZ Clinic" />
-        <meta property="business:contact_data:street_address" content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600" />
+        <meta
+          property="og:image"
+          content="https://d375139ucebi94.cloudfront.net/region2/pl/162702/logo/87abe39eef5d4f5cb4968854db35be-ginger-beauty-zone-logo-0b4580ef172240329bb5c6e7f314b3-booksy.jpeg"
+        />
+        <meta
+          property="og:description"
+          content="Краса та здоров'я разом в FZ Clinic"
+        />
+        <meta
+          property="business:contact_data:street_address"
+          content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600"
+        />
         <meta property="business:contact_data:locality" content="Kremenchug" />
         <meta property="business:contact_data:postal_code" content="39600" />
         <meta property="business:contact_data:country_name" content="Ukraine" />
@@ -70,15 +81,28 @@ export default function About() {
                 Про нас
               </h2>
               <p className="font-medium">
-                FZ Clinic - особливий заклад, що створений для того, щоб задовольнити потреби своїх клієнтів у якісній медичній допомозі. Наша команда професіоналів пропонує послуги з стоматології та косметології на високому рівні.
+                FZ Clinic - особливий заклад, що створений для того, щоб
+                задовольнити потреби своїх клієнтів у якісній медичній допомозі.
+                Наша команда професіоналів пропонує послуги з стоматології та
+                косметології на високому рівні.
               </p>
               <p className="my-4 font-medium">
-                Наші стоматологи володіють сучасними методиками лікування та забезпечують максимальний комфорт для своїх пацієнтів. Ми пропонуємо широкий спектр послуг - від профілактики та зняття зубного каменю до складних відновлювальних робіт.
-                Крім того, наші косметологи здатні створити ідеальний образ для кожної жінки. Ми пропонуємо процедури, що допоможуть зберегти молодість та красу шкіри, такі як чистка обличчя, пілінг, масаж та багато інших.
+                Наші стоматологи володіють сучасними методиками лікування та
+                забезпечують максимальний комфорт для своїх пацієнтів. Ми
+                пропонуємо широкий спектр послуг - від профілактики та зняття
+                зубного каменю до складних відновлювальних робіт. Крім того,
+                наші косметологи здатні створити ідеальний образ для кожної
+                жінки. Ми пропонуємо процедури, що допоможуть зберегти молодість
+                та красу шкіри, такі як чистка обличчя, пілінг, масаж та багато
+                інших.
               </p>
               <p className="font-medium">
-                Ми знаходимось в самому серці Кременчука за адресою вулиця Першотравнева, 51. Для наших клієнтів ми підготували затишні кабінети з сучасним обладнанням, що допоможе забезпечити максимальний комфорт та безпеку в процесі лікування та процедур.
-                Заходьте до нас в гості та довірте своє здоров'я професіоналам! FZ Clinic - ваш надійний партнер у справах здоров'я та краси.
+                Ми знаходимось в самому серці Кременчука за адресою вулиця
+                Першотравнева, 51. Для наших клієнтів ми підготували затишні
+                кабінети з сучасним обладнанням, що допоможе забезпечити
+                максимальний комфорт та безпеку в процесі лікування та процедур.
+                Заходьте до нас в гості та довірте своє здоров'я професіоналам!
+                FZ Clinic - ваш надійний партнер у справах здоров'я та краси.
               </p>
             </div>
 
@@ -87,7 +111,7 @@ export default function About() {
                 src={AboutAbout}
                 alt="BlackLady"
                 className="absolurte -z-1 p-2 rounded-2xl w-full h-auto"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: "cover" }}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
@@ -96,7 +120,8 @@ export default function About() {
             <div className="col-span-2 xl:col-span-8 xl:flex-row xl:items-center flex flex-col items-end justify-between h-full md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center ">
                 <span className="inline-block text-7xl font-bold dark:text-light/75 lg:text-4xl xs:text-2xl">
-                  <AnimatedValue value={1280} className="dark:text-light/75 " />+
+                  <AnimatedValue value={1280} className="dark:text-light/75 " />
+                  +
                 </span>
                 <h2 className="text-xl text-end font-medium capitalize text-dark/75 dark:text-light/75 lg:text-center xs:text-xs xs:mr-1">
                   задоволених клієнтів
@@ -141,7 +166,7 @@ export default function About() {
                       className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className='w-full flex items-center justify-center min-h-[84px]'>
+                  <div className="w-full flex items-center justify-center min-h-[84px]">
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
                       <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                         Сергій Шандра
@@ -172,7 +197,7 @@ export default function About() {
                       className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
                     />
                   </div>
-                  <div className='w-full flex items-center justify-center min-h-[84px]'>
+                  <div className="w-full flex items-center justify-center min-h-[84px]">
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
                       <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                         Катерина Шандра

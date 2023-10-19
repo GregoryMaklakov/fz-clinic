@@ -16,7 +16,7 @@ import {
   PriceList,
 } from '../../components';
 import HeroPrice from '../../../public/images/price/hero.jpg';
-import { priceDental } from '../../lib/constant';
+import { priceCosmetology, priceDental } from '../../lib/constant';
 
 export default function Price() {
   const { setHoveringText } = useContext(CursorContext);
@@ -41,7 +41,7 @@ export default function Price() {
       title: 'Косметологія',
       content: (
         <div className='p-4'>
-          <PriceList categories={priceDental} />
+          <PriceList categories={priceCosmetology} />
         </div>
       ),
     },
