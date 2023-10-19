@@ -158,7 +158,7 @@ export default function About() {
             </motion.h3>
             <div className="flex flex-wrap gap-16 items-center justify-center w-full my-16">
               <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
+                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full sm:flex-col sm:max-h-full sm:min-w-[88vw]">
                   <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={AboutSerhii}
@@ -189,7 +189,7 @@ export default function About() {
               </motion.div>
 
               <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full overflow-hidden sm:flex-col sm:max-h-full sm:min-w-[88vw]">
+                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full sm:flex-col sm:max-h-full sm:min-w-[88vw]">
                   <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
                     <Image
                       src={AboutKate}

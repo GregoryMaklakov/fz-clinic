@@ -2,18 +2,18 @@
 import Image from 'next/image';
 import Head from 'next/head';
 import PropTypes from 'prop-types';
-import { motion, useScroll } from 'framer-motion';
+import { motion, useScroll, } from 'framer-motion';
 import { useContext } from 'react';
 import { CursorContext } from '../../lib/context';
 import {
   AnimatedText,
   BooksyButton,
   FrameWhiteBlack,
-  GingerButton,
   Layout,
   TransitionPageEffect,
   Tabs,
   PriceList,
+  FlippedText,
 } from '../../components';
 import HeroPrice from '../../../public/images/price/hero.jpg';
 import { priceCosmetology, priceDental } from '../../lib/constant';
@@ -77,13 +77,8 @@ export default function Price() {
               (max-width: 1200px) 50vw,
               33vw"
             />
-            <div className="w-1/3 lg:w-full">
-              <GingerButton
-                href="/"
-                size={240}
-                className="z-10"
-                color="white"
-              />
+            <div className="w-1/3 lg:w-full z-50 flex items-center justify-center text-light text-7xl font-bold">
+              <FlippedText />
             </div>
             <div className="flex flex-col w-2/3 p-8 lg:w-full lg:text-center lg:pt-0">
               <CursorContext.Consumer>
@@ -153,3 +148,5 @@ LiIcon.propTypes = {
     prop2: PropTypes.number,
   }).isRequired,
 };
+
+

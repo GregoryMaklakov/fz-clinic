@@ -13,3 +13,4 @@ export * from "./CustomCursor";
 export * from "./Footer";
 export * from "./Price";
 export * from "./Tabs";
+export * from "./FlippedText";

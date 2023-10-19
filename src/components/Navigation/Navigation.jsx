@@ -1,14 +1,13 @@
-import Link from 'next/link';
 import { useState, useEffect, useContext } from 'react';
-import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
-import { PropTypes } from 'prop-types';
 import { Icon } from '../Icons/Icon';
 import { Routes, socialLink } from '../../lib/constant';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
 import { SunIcon } from '../Icons/SunIcon';
 import { CursorContext, ThemeContext } from '../../lib/context';
+import { CustomMobileLink } from './CustomMobileLink';
+import { CustomLink } from './CustomLink';
 
 const navLinks = [
   {
@@ -65,6 +64,7 @@ export function Navigation() {
 
   return (
     <header className="w-full max-w-[1920px] mx-auto px-32 lg:px-16 md:px-6 py-8 font-medium flex items-center justify-between z-50 relative dark:text-light">
+      {/* Burger */}
       <button
         aria-label="burger-menu"
         type="button"
@@ -200,13 +200,13 @@ export function Navigation() {
                 <Icon name="facebook" />
               </motion.a>
               <motion.a
-                className="mr-0 dark:fill-dark fill-light"
-                href={socialLink.booksy}
+                className="mr-3 dark:fill-dark fill-light"
+                href={socialLink.google}
                 target="_blank"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Icon name="booksy" size={100} />
+                <Icon name="gmail" />
               </motion.a>
               <button
                 type="button"
@@ -233,69 +233,69 @@ export function Navigation() {
   );
 }
 
-export function CustomLink({ href, title, className }) {
-  const router = useRouter();
-  const { setHoveringLink } = useContext(CursorContext);
+// export function CustomLink({ href, title, className }) {
+//   const router = useRouter();
+//   const { setHoveringLink } = useContext(CursorContext);
 
-  const handleMouseEnter = () => {
-    setHoveringLink(true);
-  };
+//   const handleMouseEnter = () => {
+//     setHoveringLink(true);
+//   };
 
-  const handleMouseLeave = () => {
-    setHoveringLink(false);
-  };
+//   const handleMouseLeave = () => {
+//     setHoveringLink(false);
+//   };
 
-  return (
-    <Link
-      href={href}
-      className={`relative group ${className}`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {title}
-      <span
-        className={`
-            h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
-          }`}
-      />
-    </Link>
-  )
-}
+//   return (
+//     <Link
+//       href={href}
+//       className={`relative group ${className}`}
+//       onMouseEnter={handleMouseEnter}
+//       onMouseLeave={handleMouseLeave}
+//     >
+//       {title}
+//       <span
+//         className={`
+//             h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
+//           }`}
+//       />
+//     </Link>
+//   )
+// }
 
 
-CustomLink.propTypes = {
-  href: PropTypes.string,
-  title: PropTypes.string,
-  className: PropTypes.string,
-};
+// CustomLink.propTypes = {
+//   href: PropTypes.string,
+//   title: PropTypes.string,
+//   className: PropTypes.string,
+// };
 
-function CustomMobileLink({ href, title, className, toggle }) {
-  const router = useRouter();
+// function CustomMobileLink({ href, title, className, toggle }) {
+//   const router = useRouter();
 
-  const handleClick = () => {
-    toggle();
-    router.push(href);
-  };
-  return (
-    <button
-      type="button"
-      href={href}
-      className={`${className} relative group text-light dark:text-dark`}
-      onClick={handleClick}
-    >
-      {title}
-      <span
-        className={`
-            h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
-          }`}
-      />
-    </button>
-  );
-}
+//   const handleClick = () => {
+//     toggle();
+//     router.push(href);
+//   };
+//   return (
+//     <button
+//       type="button"
+//       href={href}
+//       className={`${className} relative group text-light dark:text-dark`}
+//       onClick={handleClick}
+//     >
+//       {title}
+//       <span
+//         className={`
+//             h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
+//           }`}
+//       />
+//     </button>
+//   );
+// }
 
-CustomMobileLink.propTypes = {
-  href: PropTypes.string,
-  title: PropTypes.string,
-  className: PropTypes.string,
-  toggle: PropTypes.func,
-};
+// CustomMobileLink.propTypes = {
+//   href: PropTypes.string,
+//   title: PropTypes.string,
+//   className: PropTypes.string,
+//   toggle: PropTypes.func,
+// };

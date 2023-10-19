@@ -29,11 +29,11 @@ export function Tabs({ items }) {
           ))}
         </div>
 
-        <div className="">
+        <div className="content">
           {items.map((item, index) => (
             <div
               className={`${selectedTab === index ? "" : "hidden"}`}
-              key={item.index}
+              key={item.title}
             >
               {item.content}
             </div>

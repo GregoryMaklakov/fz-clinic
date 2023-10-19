@@ -44,9 +44,15 @@ PriceItem.propTypes = {
     ]),
     price: PropTypes.oneOfType([
         PropTypes.number.isRequired,
+        PropTypes.string.isRequired,
         PropTypes.shape({
             min: PropTypes.number.isRequired,
             max: PropTypes.number.isRequired,
         }).isRequired,
     ]),
 };
+
+
+
+
+

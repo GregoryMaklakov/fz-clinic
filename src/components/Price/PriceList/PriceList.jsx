@@ -26,7 +26,12 @@ export function PriceList({ categories }) {
 }
 
 PriceList.propTypes = {
-    categories: PropTypes.node.isRequired,
+    categories: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            heading: PropTypes.string,
+            items: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+        })
+    ).isRequired,
 };
-
-

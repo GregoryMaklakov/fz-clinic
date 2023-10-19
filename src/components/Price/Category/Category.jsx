@@ -41,6 +41,6 @@ export function Category({ name, items, heading }) {
 
 Category.propTypes = {
     name: PropTypes.string.isRequired,
-    heading: PropTypes.string.isRequired,
+    heading: PropTypes.string,
     items: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
