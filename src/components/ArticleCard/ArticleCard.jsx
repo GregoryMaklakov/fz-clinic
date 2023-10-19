@@ -31,6 +31,8 @@ export function ArticleCard({ image, title, time, link, subtitle }) {
           height={400}
           className="w-full"
           loading="lazy"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQg..."
           sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw, 50vw"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}

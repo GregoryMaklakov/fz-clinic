@@ -21,7 +21,7 @@ export function FlippedText() {
     }, [currentTextIndex]);
 
     return (
-        <div className="w-1/3 lg:w-full z-50 flex items-center justify-center text-light xl:!text-4xl lg:text-center lg:text-6xl md:text-5xl sm:text-3xl lg:my-6">
+        <div className="w-1/3 lg:w-full h-[72px] lg-h-[40px] z-50 flex items-center justify-center text-light xl:!text-4xl lg:text-center lg:text-6xl md:text-5xl sm:text-3xl lg:my-4">
             <span className="your-text-element" />
         </div>
     );
