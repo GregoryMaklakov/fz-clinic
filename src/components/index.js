@@ -14,3 +14,4 @@ export * from "./Footer";
 export * from "./Price";
 export * from "./Tabs";
 export * from "./FlippedText";
+export * from "./Employee";

@@ -1,8 +1,7 @@
 import Head from "next/head";
 import PropTypes from "prop-types";
 import { AnimatedText, Layout, TransitionPageEffect, ArticleCard } from "../../components";
-import { articles } from "../../lib/constant";
-
+import { articles } from "../../lib";
 
 export default function Articles({ summary }) {
     return (

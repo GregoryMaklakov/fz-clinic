@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { Icon } from '../Icons/Icon';
-import { Routes, socialLink } from '../../lib/constant';
+import { Routes, socialLink } from '../../lib';
 import { Logo } from '../Logo';
 import { MoonIcon } from '../Icons/MoonIcon';
 import { SunIcon } from '../Icons/SunIcon';

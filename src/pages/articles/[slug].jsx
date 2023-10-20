@@ -6,7 +6,7 @@ import {
   Layout,
   TransitionPageEffect,
 } from "../../components";
-import { articles } from "../../lib/constant";
+import { articles } from "../../lib";
 
 function ArticlePage() {
   const router = useRouter();

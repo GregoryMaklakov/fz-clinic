@@ -8,13 +8,10 @@ import {
   Layout,
   FrameWhiteBlack,
   TransitionPageEffect,
-  Icon,
+  Employee
 } from "../../components";
 import AboutAbout from "../../../public/images/about/about-about.jpeg";
-import AboutKate from "../../../public/images/about/about-kate.jpeg";
-import AboutSerhii from "../../../public/images/about/about-serhii.jpeg";
-
-import { socialLink } from "../../lib/constant";
+import { employeeData } from "../../lib";
 
 export default function About() {
   const [daysSince, setDaysSince] = useState(0);
@@ -30,13 +27,6 @@ export default function About() {
   const motionSettings = {
     initial: { y: 50 },
     whileInView: { y: 0 },
-    transition: { duration: 1, type: "spring", delay: 0.1 },
-    viewport: { once: true },
-  };
-
-  const motionFrameWhiteBlack = {
-    initial: { opacity: 0, y: 50 },
-    whileInView: { opacity: 1, y: 0 },
     transition: { duration: 1, type: "spring", delay: 0.1 },
     viewport: { once: true },
   };
@@ -157,67 +147,15 @@ export default function About() {
               Наші Експерти
             </motion.h3>
             <div className="flex flex-wrap gap-16 items-center justify-center w-full my-16">
-              <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full sm:flex-col sm:max-h-full sm:min-w-[88vw]">
-                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                      src={AboutSerhii}
-                      alt="AboutSerhii"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
-                    />
-                  </div>
-                  <div className="w-full flex items-center justify-center min-h-[84px]">
-                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                        Сергій Шандра
-                      </h4>
-                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Лікар стоматолог
-                      </h5>
-                    </div>
-                    <motion.a
-                      className="dark:fill-light"
-                      href={socialLink.instaSerhii}
-                      target="_blank"
-                      whileHover={{ y: -2 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <Icon name="insta" />
-                    </motion.a>
-                  </div>
-                </FrameWhiteBlack>
-              </motion.div>
-
-              <motion.div {...motionFrameWhiteBlack}>
-                <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full sm:flex-col sm:max-h-full sm:min-w-[88vw]">
-                  <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                      src={AboutKate}
-                      alt="AboutKate"
-                      className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
-                    />
-                  </div>
-                  <div className="w-full flex items-center justify-center min-h-[84px]">
-                    <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                      <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                        Катерина Шандра
-                      </h4>
-                      <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
-                        Лікар косметолог
-                      </h5>
-                    </div>
-                    <motion.a
-                      className="dark:fill-light"
-                      href={socialLink.instaKate}
-                      target="_blank"
-                      whileHover={{ y: -2 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <Icon name="insta" />
-                    </motion.a>
-                  </div>
-                </FrameWhiteBlack>
-              </motion.div>
+              {employeeData.map((employee) => (
+                <Employee
+                  key={employee.id}
+                  name={employee.name}
+                  position={employee.position}
+                  imageSrc={employee.imageSrc}
+                  instaLink={employee.instaLink}
+                />
+              ))}
             </div>
           </div>
         </Layout>
@@ -225,3 +163,4 @@ export default function About() {
     </>
   );
 }
+

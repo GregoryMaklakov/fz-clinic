@@ -16,7 +16,7 @@ import {
   FlippedText,
 } from '../../components';
 import HeroPrice from '../../../public/images/price/hero.jpg';
-import { priceCosmetology, priceDental } from '../../lib/constant';
+import { priceCosmetology, priceDental } from '../../lib';
 
 export default function Price() {
   const { setHoveringText } = useContext(CursorContext);
@@ -46,6 +46,7 @@ export default function Price() {
       ),
     },
   ];
+  const textVariants = ["DENTAL", "BEAUTY", "HEALTH", "SMILE", "SKIN", "CARE", "TOOTH", "LIPS", "FACE", "GLOW", "TEETH", "PURE", "HEAL", "SHINE"];
 
   return (
     <>
@@ -77,8 +78,8 @@ export default function Price() {
               (max-width: 1200px) 50vw,
               33vw"
             />
-            <div className="w-1/3 lg:w-full z-50 flex items-center justify-center text-light text-7xl font-bold">
-              <FlippedText />
+            <div className="w-1/3 lg:w-full z-50 flex items-center justify-center text-light text-6xl xl:text-4xl my-4">
+              <FlippedText textVariants={textVariants} />
             </div>
             <div className="flex flex-col w-2/3 p-8 lg:w-full lg:text-center lg:pt-0">
               <CursorContext.Consumer>
@@ -87,7 +88,7 @@ export default function Price() {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                     className={`${isHoveringText ? "text-dark bg-transparent dark:bg-transparent dark:text-light" : "text-dark dark:bg-transparent dark:text-light"
-                      } !text-4xl pt-8 text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm`}
+                      } !text-4xl text-left z-10 text-light lg:text-center lg:pt-0 md:!text-2xl sm:!text-lg xs:!text-sm`}
                     text={`Отримайте ${10}% знижку на наші послуги під час вашого першого візиту до нашої клініки!`}
                   />
                 )}
