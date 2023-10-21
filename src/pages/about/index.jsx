@@ -8,7 +8,8 @@ import {
   Layout,
   FrameWhiteBlack,
   TransitionPageEffect,
-  Employee
+  Employee,
+  ServicesSchedule
 } from "../../components";
 import AboutAbout from "../../../public/images/about/about-about.jpeg";
 import { employeeData } from "../../lib";
@@ -30,6 +31,30 @@ export default function About() {
     transition: { duration: 1, type: "spring", delay: 0.1 },
     viewport: { once: true },
   };
+
+  //
+  const stagesDataSMM = [
+    {
+      number: "01/",
+      title: "Чому обрати FZ Clinic?",
+      text: "FZ Clinic - це місце, де ваше здоров'я завжди на першому місці. Ми пропонуємо вам послуги високої якості в галузі стоматології та косметології. Наші спеціалісти - це висококваліфіковані фахівці, готові надати вам найкращий догляд."
+    },
+    {
+      number: "02/",
+      title: "Підтримка і дбайливий підхід",
+      text: "Ми прагнемо створити комфортне середовище для наших пацієнтів і зробити кожний візит приємним та корисним. Ми завжди турбуємося про ваше здоров'я і красу."
+    },
+    {
+      number: "03/",
+      title: "Високоякісні послуги",
+      text: "В FZ Clinic ми використовуємо сучасні технології та найкращі практики, щоб забезпечити вам високоякісні послуги. Ваше задоволення - наш головний пріоритет."
+    },
+    {
+      number: "04/",
+      title: "Ми завжди поруч",
+      text: "Наша команда готова вас підтримати і відповісти на всі ваші запитання. Ми завжди поруч, щоб надати вам найкращий догляд."
+    }
+  ];
 
   return (
     <>
@@ -67,7 +92,7 @@ export default function About() {
           />
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 items-center">
             <div className="col-span-3 xl:col-span-4 flex flex-col items-start justify-start md:order-2 md:col-span-8">
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
+              <h2 className="mb-4 font-bold uppercase text-dark/75 dark:text-light/75 text-xl xs:text-xs">
                 Про нас
               </h2>
               <p className="font-medium">
@@ -156,6 +181,11 @@ export default function About() {
                   instaLink={employee.instaLink}
                 />
               ))}
+            </div>
+          </div>
+          <div className="w-full my-16 mx-auto">
+            <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">
+              <ServicesSchedule name="Чому слід обрати нас?" data={stagesDataSMM} />
             </div>
           </div>
         </Layout>

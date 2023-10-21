@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState, useEffect, useRef } from "react";
 import { CursorContext, ThemeContext } from "../lib/context";
 import HeroArtDark from "../../public/images/home/heroDark01.jpeg";
-import HeroArtLight from "../../public/images/home/heroDark.jpeg";
+// import HeroArtLight from "../../public/images/home/heroDark.jpeg";
 import {
-  Layout,
-  AnimatedText,
+  // Layout,
+  // AnimatedText,
   Icon,
   BooksyButton,
   TransitionPageEffect,
@@ -160,7 +160,7 @@ export default function Home() {
 
       <TransitionPageEffect />
       <main className="">
-        <section className="flex w-full flex-col items-center justify-center min-h-[80vh] bg-cover bg-center bg-no-repeat bg-[url('../../public/images/price/hero.jpg')]">
+        <section className="flex w-full flex-col items-center justify-center min-h-[80vh] bg-cover bg-center bg-no-repeat bg-[url('../../public/images/price/hero2.png')]">
           <div className="w-full max-w-[1920px] mx-auto h-full inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
             <div className="w-full flex items-center justify-between lg:flex-col sm:mt-6">
               <div className="w-full flex flex-col items-center self-center lg:w-full">

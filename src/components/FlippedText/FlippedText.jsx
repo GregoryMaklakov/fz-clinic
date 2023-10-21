@@ -25,7 +25,7 @@ export function FlippedText({ textVariants }) {
     }, [currentTextIndex, textVariants]);
 
     return (
-        <div className="inline-block text-light border-solid border-2 rounded-[2rem] py-2 px-4 border-light capitalize">
+        <div className="inline-block text-light/75 border-solid border-2 rounded-[2rem] py-2 px-4 border-light/75 capitalize">
             <span ref={textElementRef} />
         </div>
     );
