@@ -4,6 +4,8 @@ import Head from "next/head";
 import {
   FrameWhiteBlack,
   Layout,
+  ServicesSchedule,
+  ServicesTextRight,
   TransitionPageEffect,
 } from "../../components";
 import { articles } from "../../lib";
@@ -57,7 +59,7 @@ function ArticlePage() {
           <div className="grid w-full grid-cols-8 gap-16 lg:gap-6 sm:gap-8 items-center">
             <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
               {article.text.map(text => (
-                <p key={text.id} className="my-4 font-medium">
+                <p key={text} className="my-4 font-medium">
                   {text}
                 </p>
               ))}
@@ -74,6 +76,22 @@ function ArticlePage() {
               />
             </FrameWhiteBlack>
           </div>
+
+          {article.servicesSchedule &&
+            article.servicesSchedule.map(schedule => (
+              <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">
+                <ServicesSchedule
+                  key={schedule}
+                  name={schedule.name}
+                  data={schedule.data}
+                />
+              </div>
+            ))}
+
+          {article.servicesTextRight && (
+            <ServicesTextRight data={article.servicesTextRight}
+            />
+          )}
         </Layout>
       </section>
     </>

@@ -5,7 +5,7 @@ export function ServicesSchedule({ name, data }) {
     return (
         <section className="py-16 ">
             <div className="sm:max-w-full">
-                <h2 className="text-8xl font-bold text-center lg:text-5xl xs:text-3xl mb-12">
+                <h2 className="font-bold text-center text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-12">
                     {name}
                 </h2>
                 <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">

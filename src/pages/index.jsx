@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useContext } from "react";
-import { CursorContext } from "../lib/context";
+import { useContext, useState, useEffect } from "react";
+import { CursorContext, ThemeContext } from "../lib/context";
 import {
   Icon,
   BooksyButton,
@@ -9,9 +9,10 @@ import {
   FlippedText,
 } from "../components";
 
+
 export default function Home() {
   const { setHoveringLink } = useContext(CursorContext);
-
+  const { mode } = useContext(ThemeContext);
 
   const handleMouseEnter = () => {
     setHoveringLink(true);
@@ -61,7 +62,8 @@ export default function Home() {
 
       <TransitionPageEffect />
       <main className="">
-        <section className="flex w-full flex-col items-center justify-center min-h-[80vh] bg-cover bg-center bg-no-repeat bg-[url('../../public/images/price/hero2.png')]">
+        <section className={`flex w-full flex-col items-center justify-center min-h-[80vh] bg-cover bg-center bg-no-repeat ${mode === 'light' ? 'bg-[url("../../public/images/price/hero.jpg")]' : 'bg-[url("../../public/images/price/hero03.png")]'
+          }`}>
           <div className="w-full max-w-[1920px] mx-auto h-full inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
             <div className="w-full flex items-center justify-between lg:flex-col sm:mt-6">
               <div className="w-full flex flex-col items-center self-center lg:w-full">
@@ -76,7 +78,9 @@ export default function Home() {
                       onMouseLeave={handleMouseLeaveText}
                     >
                       <div>
-                        <div className="inline sm:block sm:mb-3">Подбай про свою</div>{" "}
+                        <div className="inline sm:block sm:mb-3">
+                          Подбай про свою
+                        </div>{" "}
                         <FlippedText textVariants={flippedTextHero} />
                       </div>
                       <div>
@@ -95,7 +99,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center self-start mt-2 sm:flex-col xs:w-full">
                   <Link
-                    className="flex items-center justify-center bg-dark text-light p-2.5 px-6  xs:px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 xs:w-full"
+                    className="flex items-center justify-center bg-dark text-light p-2.5 px-6 xs:px-4 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light dark:text-dark dark:bg-light sm:mb-4 xs:w-full"
                     href="/dummy.pdf"
                     target="_blank"
                     download

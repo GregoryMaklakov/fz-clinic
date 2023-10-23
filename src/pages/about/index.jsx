@@ -33,7 +33,7 @@ export default function About() {
   };
 
   //
-  const stagesDataSMM = [
+  const stagesDataAbout = [
     {
       number: "01/",
       title: "Чому обрати FZ Clinic?",
@@ -185,7 +185,7 @@ export default function About() {
           </div>
           <div className="w-full my-16 mx-auto">
             <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">
-              <ServicesSchedule name="Чому слід обрати нас?" data={stagesDataSMM} />
+              <ServicesSchedule name="Чому слід обрати нас?" data={stagesDataAbout} />
             </div>
           </div>
         </Layout>

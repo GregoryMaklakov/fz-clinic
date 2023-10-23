@@ -17,10 +17,9 @@ export function BooksyButton({ className }) {
 				<Link
 					href="tel:380987775580"
 					className="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark text-light shadow-md border border-solid border-dark w-20 h-20 rounded-full font-semibold hover:bg-light hover:text-dark hover:dark:border-light dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light md:w-[52px] md:h-[52px]"
-					target="_blank"
 				>
-					<span className="flex items-center justify-center text-center">
-						<Icon name="phone" className="lg:w-[24px] lg:h-[24px] fill-light dark:fill-dark" />
+					<span className="flex items-center justify-center text-center text-xl">
+						Call
 					</span>
 				</Link>
 			</div>
