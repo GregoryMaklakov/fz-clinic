@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ServicesScheduleItem } from '../ServicesScheduleItem/ServicesScheduleItem';
+import { ServicesScheduleItem } from './ServicesScheduleItem/ServicesScheduleItem';
 
 export function ServicesSchedule({ name, data }) {
     return (
