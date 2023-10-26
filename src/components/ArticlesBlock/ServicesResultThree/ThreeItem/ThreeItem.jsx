@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 
 export function ThreeItem({ before, amount, subtitle }) {
     return (
-        <div className="mb-6 flex flex-col gap-[4px]  border-b-[1px] dark:border-b-light/50 border-b-dark/75 ">
+        <li className="mb-6 flex flex-col gap-[4px]  border-b-[1px] dark:border-b-light/50 border-b-dark/75 ">
             <div className="flex items-center gap-[8px] dark:text-light text-dark">
                 {before}
                 <div className="text-6xl font-bold leading-[1.1] dark:text-primary text-dark/75">
@@ -12,7 +12,7 @@ export function ThreeItem({ before, amount, subtitle }) {
             <p className="min-w-full font-medium leading-[1.1] lg:text-[14px] text-xl mb-6 dark:text-light text-dark">
                 {subtitle}
             </p>
-        </div>
+        </li>
     )
 }
 

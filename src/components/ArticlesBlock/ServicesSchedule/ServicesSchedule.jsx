@@ -1,19 +1,21 @@
-import PropTypes from 'prop-types';
-import { ServicesScheduleItem } from './ServicesScheduleItem/ServicesScheduleItem';
+import PropTypes from "prop-types";
+import { ServicesScheduleItem } from "./ServicesScheduleItem/ServicesScheduleItem";
 
 export function ServicesSchedule({ name, data }) {
     return (
         <section className="py-16 ">
             <div className="sm:max-w-full">
-                <h2 className="font-bold text-center text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-12">
-                    {name}
-                </h2>
+                {name && (
+                    <h2 className="font-bold text-center text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-12">
+                        {name}
+                    </h2>
+                )}
                 <div className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px]">
-                    <div>
-                        {data.map((item) => (
+                    <ul>
+                        {data.map(item => (
                             <ServicesScheduleItem {...item} key={item.number} />
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -27,6 +29,6 @@ ServicesSchedule.propTypes = {
             number: PropTypes.string,
             title: PropTypes.string,
             text: PropTypes.string,
-        })
-    )
+        }),
+    ),
 };

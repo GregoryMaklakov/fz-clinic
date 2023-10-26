@@ -8,7 +8,8 @@ import {
   ServicesSchedule,
   ServicesTextRight,
   TransitionPageEffect,
-  Accordion
+  Accordion,
+  ServicesAdvantages
 } from "../../components";
 import { articles } from "../../lib";
 
@@ -63,7 +64,7 @@ function ArticlePage() {
             <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
               {article.text &&
                 article.text.map(text => (
-                  <p key={text} className="my-4 font-medium">
+                  <p key={text} className="my-4 font-medium max-w-[480px]">
                     {text}
                   </p>
                 ))}
@@ -89,19 +90,26 @@ function ArticlePage() {
             </FrameWhiteBlack>
           </div>
 
+          {article.servicesAdvantage && (
+            <ServicesAdvantages list={article.servicesAdvantage.list} heading={article.servicesAdvantage.heading} />
+          )}
+
           {article && article.blockAccordion && article.blockAccordion.map(item => (
             <Accordion heading={item.heading} data={item.data} />
           ))}
 
           {article.servicesSchedule &&
             article.servicesSchedule.map(schedule => (
-              <div
-                className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px] "
-                key={schedule}
-              >
-                <ServicesSchedule name={schedule.name} data={schedule.data} />
-              </div>
+              <ServicesSchedule name={schedule.name} data={schedule.data} key={schedule} />
             ))}
+
+          {article.servicesAdvantageSecond && (
+            <ServicesAdvantages list={article.servicesAdvantageSecond.list} heading={article.servicesAdvantageSecond.heading} />
+          )}
+
+          {article.servicesAdvantageThird && (
+            <ServicesAdvantages list={article.servicesAdvantageThird.list} heading={article.servicesAdvantageThird.heading} />
+          )}
 
           {article.servicesTextRight && (
             <ServicesTextRight data={article.servicesTextRight} />

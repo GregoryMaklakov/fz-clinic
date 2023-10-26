@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types";
 
 export function ServicesScheduleItem({ number, title, text }) {
   return (
-    <div className="flex flex-row px-6 md:px-0 lg:flex-col justify-between border-b-[1px] dark:border-b-light/50 border-b-dark/75 py-12 xl:py-8">
+    <li className="flex flex-row px-6 md:px-0 lg:flex-col justify-between border-b-[1px] dark:border-b-light/50 border-b-dark/75 py-12 xl:py-8">
       <div className="flex flex-row gap-[250px] xl:flex-col xl:gap-2">
         <span className="text-xl xs:text-xs font-bold leading-[1.4] text-dark dark:text-light/75">
           {number}
@@ -12,10 +12,10 @@ export function ServicesScheduleItem({ number, title, text }) {
         </h3>
       </div>
 
-      <p className="font-medium text-base leading-[1.4] max-w-[44%] lg:max-w-full">
+      <p className="font-medium text-base leading-[1.4] max-w-[35%] lg:max-w-full ">
         {text}
       </p>
-    </div>
+    </li>
   );
 }
 

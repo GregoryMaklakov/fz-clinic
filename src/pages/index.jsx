@@ -62,7 +62,7 @@ export default function Home() {
 
       <TransitionPageEffect />
       <main className="">
-        <section className={`flex w-full flex-col items-center justify-center min-h-[80vh] bg-cover bg-center bg-no-repeat ${mode === 'light' ? 'bg-[url("../../public/images/price/hero.jpg")]' : 'bg-[url("../../public/images/price/hero03.png")]'
+        <section className={`flex w-full flex-col items-center justify-center min-h-[80vh] bg-cover bg-center bg-no-repeat ${mode === 'light' ? '' : 'bg-[url("../../public/images/price/hero03.png")]'
           }`}>
           <div className="w-full max-w-[1920px] mx-auto h-full inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
             <div className="w-full flex items-center justify-between lg:flex-col sm:mt-6">
@@ -73,7 +73,7 @@ export default function Home() {
                       className={`inline-flex flex-col gap-2 w-full font-bold capitalize text-left text-6xl xl:text-4xl  ${isHoveringText
                         ? "text-dark bg-inherit dark:bg-inherit dark:text-light"
                         : "text-dark dark:bg-inherit dark:text-light"
-                        } md:text-4xl dark:bg-inherit text-light`}
+                        } md:text-4xl dark:bg-inherit text-dark dark:text-light`}
                       onMouseEnter={handleMouseEnterText}
                       onMouseLeave={handleMouseLeaveText}
                     >
@@ -91,7 +91,7 @@ export default function Home() {
                     </div>
                   )}
                 </CursorContext.Consumer>
-                <p className="my-4 text-base font-medium self-start  text-light w-[80%] xs:w-full">
+                <p className="my-4 text-base font-medium self-start  dark:text-light w-[80%] xs:w-full">
                   FZ Clinic - особливий заклад, що створений для того, щоб
                   задовольнити потреби своїх клієнтів у якісній медичній
                   допомозі. Наша команда професіоналів пропонує послуги з
@@ -110,7 +110,7 @@ export default function Home() {
                     <Icon name="linkArrow" size={24} className="ml-2" />
                   </Link>
                   <Link
-                    className="flex items-center sx:w-full xs:mt-4 ml-4 xs:ml-0 font-medium capitalize underline text-lg text-light"
+                    className="flex items-center sx:w-full xs:mt-4 ml-4 xs:ml-0 font-medium capitalize underline text-lg text-dark dark:text-light"
                     href="tel:380987775580"
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}

@@ -9,11 +9,11 @@ export function ServicesResultThree({ name, data }) {
                     {name}
                 </h2>
                 <div className="">
-                    <div className="flex flex-col justify-between flex-wrap gap-x-[20px] pt-[30px]">
+                    <ul className="flex flex-col justify-between flex-wrap gap-x-[20px] pt-[30px]">
                         {data.map((item) => (
                             <ThreeItem {...item} key={item.index} />
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </div>
         </section>
