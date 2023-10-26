@@ -26,7 +26,7 @@ ServicesSchedule.propTypes = {
         PropTypes.shape({
             number: PropTypes.string,
             title: PropTypes.string,
-            text: PropTypes.string
+            text: PropTypes.string,
         })
     )
 };

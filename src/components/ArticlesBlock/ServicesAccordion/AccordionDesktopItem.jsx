@@ -30,9 +30,6 @@ export function AccordionDesktopItem({ subtitle, data }) {
 AccordionDesktopItem.propTypes = {
   subtitle: PropTypes.string.isRequired,
   data: PropTypes.shape({
-    num: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    image: PropTypes.string,
     bool: PropTypes.bool,
   })
 }

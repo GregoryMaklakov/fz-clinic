@@ -1,5 +1,4 @@
-
-import { PropTypes } from 'prop-types';
+import { PropTypes } from "prop-types";
 
 export function ServicesScheduleItem({ number, title, text }) {
   return (
@@ -12,6 +11,7 @@ export function ServicesScheduleItem({ number, title, text }) {
           {title}
         </h3>
       </div>
+
       <p className="font-medium text-base leading-[1.4] max-w-[44%] lg:max-w-full">
         {text}
       </p>
@@ -22,5 +22,5 @@ export function ServicesScheduleItem({ number, title, text }) {
 ServicesScheduleItem.propTypes = {
   number: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.string
-}
+  text: PropTypes.string,
+};

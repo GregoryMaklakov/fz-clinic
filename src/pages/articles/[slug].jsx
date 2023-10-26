@@ -61,20 +61,20 @@ function ArticlePage() {
           </h1>
           <div className="grid w-full grid-cols-8 gap-16 lg:gap-6 sm:gap-8 items-center">
             <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
-              {/* {article.text &&
+              {article.text &&
                 article.text.map(text => (
                   <p key={text} className="my-4 font-medium">
                     {text}
                   </p>
-                ))} */}
-              {/* {article.resultThree &&
+                ))}
+              {article.resultThree &&
                 article.resultThree.map(three => (
                   <ServicesResultThree
                     key={three}
                     name={three.name}
                     data={three.data}
                   />
-                ))} */}
+                ))}
             </div>
             <FrameWhiteBlack className="col-span-4 min-h-full xl:col-span-4 md:order-1 lg:col-span-8 h-auto lg:min-h-[450px]">
               <Image
@@ -89,7 +89,11 @@ function ArticlePage() {
             </FrameWhiteBlack>
           </div>
 
-          {/* {article.servicesSchedule &&
+          {article && article.blockAccordion && article.blockAccordion.map(item => (
+            <Accordion heading={item.heading} data={item.data} />
+          ))}
+
+          {article.servicesSchedule &&
             article.servicesSchedule.map(schedule => (
               <div
                 className="xl:flex xl:flex-row-reverse xl:justify-between xl:gap-[29px] 2xl:gap-[44px] "
@@ -97,17 +101,11 @@ function ArticlePage() {
               >
                 <ServicesSchedule name={schedule.name} data={schedule.data} />
               </div>
-            ))} */}
+            ))}
 
-          {/* {article.servicesTextRight && (
+          {article.servicesTextRight && (
             <ServicesTextRight data={article.servicesTextRight} />
-          )} */}
-
-          {article && article.blockAccordion && article.blockAccordion.map(item => (
-            <Accordion heading={item.heading} data={item.data} />
-          ))}
-
-
+          )}
         </Layout>
       </section>
     </>

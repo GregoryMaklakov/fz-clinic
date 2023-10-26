@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 export function ServicesTextRight({ data }) {
-    const { heading, paragraphFirst, paragraphSecond } = data;
+    const { heading, paragraphFirst, paragraphSecond, paragraphThird } = data;
 
     return (
         <section className="pt-[33px] pb-[40px] dark:text-light lg:pt-[50px] lg:pb-[60px]">
@@ -18,15 +18,21 @@ export function ServicesTextRight({ data }) {
                     <div className="text-[20px] font-medium leading-[1.4] xl:text-[21px] 2xl:text-[32px]">
                         {paragraphSecond}
                     </div>
+                    {paragraphThird && (
+                        <div className="text-[20px] font-medium leading-[1.4] xl:text-[21px] 2xl:text-[32px]">
+                            {paragraphThird}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
-    )
+    );
 }
 ServicesTextRight.propTypes = {
     data: PropTypes.shape({
         heading: PropTypes.string.isRequired,
         paragraphFirst: PropTypes.string.isRequired,
         paragraphSecond: PropTypes.string,
-    })
-}
+        paragraphThird: PropTypes.string,
+    }),
+};
