@@ -579,7 +579,3 @@ export const articles = [
     },
   },
 ];
-
-/* 
-
-*/

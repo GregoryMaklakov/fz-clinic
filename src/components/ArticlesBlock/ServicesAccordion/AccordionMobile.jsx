@@ -5,8 +5,8 @@ export function AccordionMobile({ data }) {
 
     return (
         <div className="hidden lg:block">
-            {data.map((item, index) => (
-                <AccordionMobileItem data={item} key={index} />
+            {data.map((item) => (
+                <AccordionMobileItem data={item} key={item.id} />
             ))}
         </div>
     );

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useContext, useState, useEffect } from "react";
+import { useContext } from "react";
 import { CursorContext, ThemeContext } from "../lib/context";
 import {
   Icon,
