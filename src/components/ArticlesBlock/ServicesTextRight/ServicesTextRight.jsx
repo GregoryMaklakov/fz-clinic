@@ -30,7 +30,7 @@ export function ServicesTextRight({ data }) {
 }
 ServicesTextRight.propTypes = {
     data: PropTypes.shape({
-        heading: PropTypes.string.isRequired,
+        heading: PropTypes.string,
         paragraphFirst: PropTypes.string.isRequired,
         paragraphSecond: PropTypes.string,
         paragraphThird: PropTypes.string,

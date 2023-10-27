@@ -9,7 +9,8 @@ import {
   ServicesTextRight,
   TransitionPageEffect,
   Accordion,
-  ServicesAdvantages
+  ServicesAdvantages,
+  ServicesTitle
 } from "../../components";
 import { articles } from "../../lib";
 
@@ -94,6 +95,10 @@ function ArticlePage() {
             <ServicesAdvantages list={article.servicesAdvantage.list} heading={article.servicesAdvantage.heading} />
           )}
 
+          {article.additionalHeadingFirst && (
+            <ServicesTitle additionalHeading={article.additionalHeadingFirst} />
+          )}
+
           {article && article.blockAccordion && article.blockAccordion.map(item => (
             <Accordion heading={item.heading} data={item.data} />
           ))}
@@ -105,6 +110,10 @@ function ArticlePage() {
 
           {article.servicesAdvantageSecond && (
             <ServicesAdvantages list={article.servicesAdvantageSecond.list} heading={article.servicesAdvantageSecond.heading} />
+          )}
+
+          {article.additionalHeadingSecond && (
+            <ServicesTitle additionalHeading={article.additionalHeadingSecond} />
           )}
 
           {article.servicesAdvantageThird && (
