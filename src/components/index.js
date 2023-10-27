@@ -16,3 +16,4 @@ export * from "./Tabs";
 export * from "./FlippedText";
 export * from "./Employee";
 export * from "./ArticlesBlock";
+export * from "./Tag";

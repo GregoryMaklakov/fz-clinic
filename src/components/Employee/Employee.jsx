@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import Image from "next/image";
 import { Icon } from "../Icons";
 import { FrameWhiteBlack } from "../FrameWhiteBlack";
 
-export function Employee({ name, position, imageSrc, instaLink }) {
+const AnimationEmployeeLink = motion(Image)
+
+export function Employee({ name, position, imageSrc, instaLink, employeeLink }) {
+    const [isHovered, setIsHovered] = useState(false);
+
 
     const motionFrameWhiteBlack = {
         initial: { opacity: 0, y: 50 },
@@ -17,19 +23,33 @@ export function Employee({ name, position, imageSrc, instaLink }) {
         <motion.div {...motionFrameWhiteBlack}>
             <FrameWhiteBlack className="flex flex-col gap-4 min-h-full p-16 items-center justify-between lg:max-h-full sm:flex-col sm:max-h-full sm:min-w-[88vw]">
                 <div className="sm:w-fit z-0 rounded-full bg-dark dark:bg-primary/75 relative overflow-hidden">
-                    <Image
-                        src={imageSrc}
-                        alt={name}
-                        width={400}
-                        height={400}
-                        className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
-                    />
+                    <Link
+                        href={employeeLink}
+                    >
+                        <AnimationEmployeeLink
+                            src={imageSrc}
+                            alt={name}
+                            width={400}
+                            height={400}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.2 }}
+                            initial={isHovered ? "hover" : "rest"}
+                            animate={isHovered ? "hover" : "rest"}
+                            custom={isHovered}
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}
+                            className="h-auto w-full max-w-md rounded-2xl object-cover lg:max-w-full z-10 relative"
+                        />
+                    </Link>
                 </div>
                 <div className="w-full flex items-center justify-center min-h-[84px]">
                     <div className="flex flex-col w-full lg:max-h-60 overflow-y-auto sm:w-full">
-                        <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                            {name}
-                        </h4>
+                        <Link
+                            href={employeeLink}>
+                            <h4 className="text-lg font-bold uppercase text-dark/75 dark:text-light/75 hover:underline">
+                                {name}
+                            </h4>
+                        </Link>
                         <h5 className="text-lg font-bold text-primary/75 dark:text-primaryDark/75">
                             {position}
                         </h5>
@@ -45,7 +65,7 @@ export function Employee({ name, position, imageSrc, instaLink }) {
                     </motion.a>
                 </div>
             </FrameWhiteBlack>
-        </motion.div>
+        </motion.div >
     );
 };
 
@@ -54,5 +74,6 @@ Employee.propTypes = {
     position: PropTypes.string,
     imageSrc: PropTypes.string,
     instaLink: PropTypes.string,
+    employeeLink: PropTypes.string,
 };
 

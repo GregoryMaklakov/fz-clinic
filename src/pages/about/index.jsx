@@ -11,8 +11,8 @@ import {
   Employee,
   ServicesSchedule
 } from "../../components";
-import AboutAbout from "../../../public/images/about/about-about.jpeg";
-import { employeeData } from "../../lib";
+import AboutAbout from "../../../public/images/about/about-about.webp";
+import { stagesDataAbout, employeeData } from "../../lib";
 
 export default function About() {
   const [daysSince, setDaysSince] = useState(0);
@@ -32,29 +32,7 @@ export default function About() {
     viewport: { once: true },
   };
 
-  //
-  const stagesDataAbout = [
-    {
-      number: "01/",
-      title: "Чому обрати FZ Clinic?",
-      text: "FZ Clinic - це місце, де ваше здоров'я завжди на першому місці. Ми пропонуємо вам послуги високої якості в галузі стоматології та косметології. Наші спеціалісти - це висококваліфіковані фахівці, готові надати вам найкращий догляд."
-    },
-    {
-      number: "02/",
-      title: "Підтримка і дбайливий підхід",
-      text: "Ми прагнемо створити комфортне середовище для наших пацієнтів і зробити кожний візит приємним та корисним. Ми завжди турбуємося про ваше здоров'я і красу."
-    },
-    {
-      number: "03/",
-      title: "Високоякісні послуги",
-      text: "В FZ Clinic ми використовуємо сучасні технології та найкращі практики, щоб забезпечити вам високоякісні послуги. Ваше задоволення - наш головний пріоритет."
-    },
-    {
-      number: "04/",
-      title: "Ми завжди поруч",
-      text: "Наша команда готова вас підтримати і відповісти на всі ваші запитання. Ми завжди поруч, щоб надати вам найкращий догляд."
-    }
-  ];
+
 
   return (
     <>
@@ -179,6 +157,7 @@ export default function About() {
                   position={employee.position}
                   imageSrc={employee.imageSrc}
                   instaLink={employee.instaLink}
+                  employeeLink={`/about/${employee.slug}`}
                 />
               ))}
             </div>

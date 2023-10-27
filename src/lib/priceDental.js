@@ -1,4 +1,4 @@
-// dental price
+// Стоматологія price
 export const priceDental = [
   // Професійна гігієна та відбілювання зубів
   {

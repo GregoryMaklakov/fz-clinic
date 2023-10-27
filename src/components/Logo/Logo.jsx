@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { CursorContext } from '../../lib/context';
+import { Icon } from "../Icons";
 
 const MotionLink = motion(Link);
 const animLink = {
@@ -29,10 +30,10 @@ export function Logo() {
                         onMouseLeave={handleMouseLeave}
                         aria-label="Ginger Beauty Zone Warszawa" href='/'
                         className={`${isHoveringLogo ? "bg-dark dark:bg-light" : "dark:bg-dark"
-                            } w-16 h-16 bg-dark text-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full text-2xl font-bold`}
+                            } w-16 h-16 bg-dark fill-light border-2 border-solid border-transparent dark:border-light flex justify-center items-center rounded-full text-2xl font-bold`}
                         whileHover={animLink}
                     >
-                        FZ
+                        <Icon name="fz" />
                     </MotionLink>
                 )}
             </CursorContext.Consumer>

@@ -2,6 +2,7 @@
 export const articles = [
   // ? article-1 -- Що таке ендодонтичне лікування зубів -- DENTAL
   {
+    tags: ["DENTAL"],
     slug: "article-1",
     title: "Що таке ендодонтичне лікування зубів",
     time: "5 min read",
@@ -15,8 +16,9 @@ export const articles = [
     ],
     imgURL: "/images/articles/article-01.webp",
   },
-  // ! article-2 -- Біорепарація поліонуклеотидами -- COSMETIC
+  // ! article-2 -- Біорепарація поліонуклеотидами -- COSMETOLOGY
   {
+    tags: ["COSMETOLOGY"],
     slug: "article-2",
     title: "Біорепарація поліонуклеотидами!",
     time: "6 min read",
@@ -91,8 +93,9 @@ export const articles = [
         "Отже, біорепарація поліонуклеотидами - це інноваційний підхід до догляду за шкірою, який може перетворити ваш вигляд і покращити її стан. За допомогою цієї процедури ви можете досягти молодішого та свіжого обличчя, зберігши природну красу вашої шкіри.",
     },
   },
-  // ! article-3 -- Мікронідлінг - це те, що вам потрібно -- COSMETIC
+  // ! article-3 -- Мікронідлінг - це те, що вам потрібно -- COSMETOLOGY
   {
+    tags: ["COSMETOLOGY"],
     slug: "article-3",
     title: "Мікронідлінг - це те, що вам потрібно!",
     subtitle: "Хочете отримати здорову та молоду шкіру без болючих процедур?",
@@ -146,8 +149,9 @@ export const articles = [
         "Не гайте часу і записуйтесь на процедуру мікронідлінгу в FZ Clinic. Ваша молодість та краса заслуговують на найкраще!",
     },
   },
-  // ! article-4 -- Аугментація губ -- COSMETIC
+  // ! article-4 -- Аугментація губ -- COSMETOLOGY
   {
+    tags: ["COSMETOLOGY"],
     slug: "article-4",
     title:
       "Аугментація губ - це чудовий спосіб підкреслити свою красу та збільшити об'єм губ. ",
@@ -180,6 +184,7 @@ export const articles = [
   },
   // ? article-5 -- Професійна гігієна порожнини рота -- DENTAL
   {
+    tags: ["DENTAL"],
     slug: "article-5",
     title: "Професійна гігієна порожнини рота: Чому вона важлива?",
     time: "9 min read",
@@ -235,6 +240,7 @@ export const articles = [
   },
   // ? article-6 -- Відбілювання зубів -- DENTAL
   {
+    tags: ["DENTAL"],
     slug: "article-6",
     title: "Відбілювання зубів",
     time: "4 min read",
@@ -288,6 +294,7 @@ export const articles = [
   },
   // ? article-7 -- Імплантація зубів -- DENTAL
   {
+    tags: ["DENTAL"],
     slug: "article-7",
     title: "Імплантація зубів",
     time: "10 min read",
@@ -361,6 +368,7 @@ export const articles = [
   },
   // ? article-8 -- Протезування зубів -- DENTAL
   {
+    tags: ["DENTAL"],
     slug: "article-8",
     title: "Протезування зубів",
     time: "11 min read",
@@ -433,6 +441,7 @@ export const articles = [
   },
   // ? article-9 -- Лікування карієсу -- DENTAL
   {
+    tags: ["DENTAL"],
     slug: "article-9",
     title: "Лікування карієсу",
     time: "8 min read",
@@ -484,8 +493,9 @@ export const articles = [
       },
     ],
   },
-  // ! article-10 -- Чистка обличчя -- COSMETIC
+  // ! article-10 -- Чистка обличчя -- COSMETOLOGY
   {
+    tags: ["COSMETOLOGY"],
     slug: "article-10",
     title: "Чистка обличчя",
     subtitle:
@@ -578,8 +588,9 @@ export const articles = [
         "Завітайте до  нашого косметолога, віна, виходячи з вашого типу шкіри, проведе вам апаратну або механічну чистку обличчя.",
     },
   },
-  // ! article-11 -- Пілінг для обличчя -- COSMETIC
+  // ! article-11 -- Пілінг для обличчя -- COSMETOLOGY
   {
+    tags: ["COSMETOLOGY"],
     slug: "article-11",
     title: "Пілінг для обличчя",
     subtitle:

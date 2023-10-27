@@ -15,7 +15,7 @@ import {
   PriceList,
   FlippedText,
 } from '../../components';
-import HeroPrice from '../../../public/images/price/hero.jpg';
+import HeroPrice from '../../../public/images/price/hero.webp';
 import { priceCosmetology, priceDental } from '../../lib';
 
 export default function Price() {
@@ -46,7 +46,7 @@ export default function Price() {
       ),
     },
   ];
-  const textVariants = ["DENTAL", "BEAUTY", "HEALTH", "SMILE", "SKIN", "CARE", "TOOTH", "LIPS", "FACE", "GLOW", "TEETH", "PURE", "HEAL", "SHINE"];
+  const textVariants = ["Стоматологія", "BEAUTY", "HEALTH", "SMILE", "SKIN", "CARE", "TOOTH", "LIPS", "FACE", "GLOW", "TEETH", "PURE", "HEAL", "SHINE"];
 
   return (
     <>

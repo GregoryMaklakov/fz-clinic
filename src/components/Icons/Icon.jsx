@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 
 export const ICON_TYPES = {
-  lodoFull: 'lodoFull',
   gmail: 'gmail',
   facebook: 'facebook',
   insta: 'insta',
@@ -9,6 +8,7 @@ export const ICON_TYPES = {
   linkArrow: 'linkArrow',
   circleText: 'circleText',
   phone: "phone",
+  fz: "fz",
 };
 
 export function Icon({ className, name, size, color }) {
@@ -100,6 +100,30 @@ export function Icon({ className, name, size, color }) {
           {...props}
         >
           <path d="m20.914 17.743-2.091 1.178a1.319 1.319 0 0 1-1.58-.217l-6.979-6.979a1.32 1.32 0 0 1-.217-1.58l1.178-2.091a1.978 1.978 0 0 0-.325-2.37L7.766 2.55a1.978 1.978 0 0 0-2.798 0L3.545 3.972a5.276 5.276 0 0 0-.793 6.446l.714 1.19a41.36 41.36 0 0 0 14.946 14.631l.141.081c2.102 1.201 4.699.851 6.382-.831l1.486-1.486a1.978 1.978 0 0 0 0-2.798l-3.136-3.136a1.978 1.978 0 0 0-2.371-.326z" />
+        </svg>
+      );
+    case ICON_TYPES.fz:
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlSpace="preserve"
+          width={size}
+          height={size}
+          viewBox="0 0 289.34 315.36"
+          {...props}
+        >
+          <g id="\u0421\u043B\u043E\u0439_x0020_1">
+            <g id="_1737587320416">
+              <path
+                d="M0 0h273.65v49.82H0zM.66 70.41v243.76H44.5V170.04h74.39v-47.16H45.17V69.84z"
+                className="fil0"
+              />
+              <path
+                d="M58.84 57.05v39.18h155.89L95.03 258.38h46.25L289.34 57.15zM82.06 277.44l-22.69 30.44s-1.94 7.47 0 7.47h229.98v-38.47l-207.29.55z"
+                className="fil0"
+              />
+            </g>
+          </g>
         </svg>
       );
     default:

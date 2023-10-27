@@ -17,21 +17,3 @@ export const socialLink = {
   googleReview:
     "https://www.google.com/maps/place/FZ+Clinic/@49.0634867,33.3755835,13z/data=!4m8!3m7!1s0x40d75384a210c489:0x3870699f4e511828!8m2!3d49.06615!4d33.4215049!9m1!1b1!16s%2Fg%2F11n0cm083d?entry=ttu",
 };
-
-// Employees
-export const employeeData = [
-  {
-    id: 1,
-    name: "Сергій Шандра",
-    position: "Лікар стоматолог",
-    instaLink: "https://www.instagram.com/dr.sergey_shandra/",
-    imageSrc: "/images/about/about-serhii.jpeg",
-  },
-  {
-    id: 2,
-    name: "Катерина Шандра",
-    position: "Лікар косметологтолог",
-    instaLink: "https://www.instagram.com/dr.katerinabella/",
-    imageSrc: "/images/about/about-kate.jpeg",
-  },
-];
