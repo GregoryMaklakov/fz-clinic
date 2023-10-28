@@ -9,17 +9,18 @@ export function CustomMobileLink({ href, title, className, toggle }) {
         toggle();
         router.push(href);
     };
+
     return (
         <button
             type="button"
             href={href}
-            className={`${className} relative group text-light dark:text-dark`}
+            className={`${className} text-xl font-bold relative group text-light dark:text-dark`}
             onClick={handleClick}
         >
             {title}
             <span
                 className={`
-              h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
+              h-[1px] inline-block  bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
                     }`}
             />
         </button>

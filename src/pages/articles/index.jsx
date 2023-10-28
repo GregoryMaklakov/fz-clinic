@@ -21,7 +21,7 @@ export default function Articles({ summary }) {
                 <meta property="og:type" content="business.business" />
                 <meta property="og:title" content="Про нас | FZ Clinic" />
                 <meta property="og:url" content="https://ginger-beauty-zone.com" />
-                <meta property="og:image" content="https://d375139ucebi94.cloudfront.net/region2/pl/162702/logo/87abe39eef5d4f5cb4968854db35be-ginger-beauty-zone-logo-0b4580ef172240329bb5c6e7f314b3-booksy.jpeg" />
+                <meta property="og:image" content="https://i.ibb.co/7jSCrpk/Xnip2023-10-28-14-42-45-1.jpg" />
                 <meta property="og:description" content="Краса та здоров'я разом в FZ Clinic" />
                 <meta property="business:contact_data:street_address" content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600" />
                 <meta property="business:contact_data:locality" content="Kremenchug" />

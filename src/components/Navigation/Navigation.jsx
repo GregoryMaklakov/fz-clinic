@@ -32,11 +32,14 @@ const navLinks = [
   },
 ];
 
+const socialLinks = [
+  { name: "insta", url: socialLink.instagram, icon: "insta" },
+  { name: "facebook", url: socialLink.facebook, icon: "facebook" },
+  { name: "gmail", url: socialLink.google, icon: "gmail" },
+];
 export function Navigation() {
 
-  // const [mode, setMode] = useThemeSwitcher();
-  const { mode, toggleTheme } = useContext(ThemeContext); // получение значения mode и функции toggleTheme из контекста
-
+  const { mode, toggleTheme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -53,11 +56,9 @@ export function Navigation() {
   }, [isOpen]);
 
   const { setHoveringLink } = useContext(CursorContext);
-
   const handleMouseEnter = () => {
     setHoveringLink(true);
   };
-
   const handleMouseLeave = () => {
     setHoveringLink(false);
   };
@@ -111,39 +112,20 @@ export function Navigation() {
           ))}
         </nav>
         <nav className="flex items-center justify-center flex-wrap">
-          <motion.a
-            className="mr-3 dark:fill-light"
-            href={socialLink.instagram}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Icon name="insta" />
-          </motion.a>
-          <motion.a
-            className="mr-3 dark:fill-light"
-            href={socialLink.facebook}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Icon name="facebook" />
-          </motion.a>
-          <motion.a
-            className="mr-3 dark:fill-light"
-            href={socialLink.google}
-            target="_blank"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <Icon name="gmail" />
-          </motion.a>
+          {socialLinks.map((link) => (
+            <motion.a
+              key={link.name}
+              className="mr-3 dark:fill-light"
+              href={link.url}
+              target="_blank"
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.9 }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <Icon name={link.name} />
+            </motion.a>
+          ))}
           <button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -167,9 +149,9 @@ export function Navigation() {
             initial={{ scale: 0, opacity: 0, y: '-50%', x: '-50%' }}
             animate={{ scale: 1, opacity: 1 }}
             className="min-w-[70vw] sm:min-w-[90vw] flex flex-col items-center justify-between fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50
-                      bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
+                      bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md pt-24 pb-16"
           >
-            <nav className="flex flex-col items-center justify-center mb-8">
+            <nav className="flex flex-col items-center justify-center pb-16 gap-3">
               {navLinks.map(link => (
                 <CustomMobileLink
                   toggle={handleClick}
@@ -180,34 +162,19 @@ export function Navigation() {
                 />
               ))}
             </nav>
-            <nav className="flex items-center justify-center flex-wrap ">
-              <motion.a
-                className="mr-3 dark:fill-dark fill-light"
-                href={socialLink.instagram}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon name="insta" />
-              </motion.a>
-              <motion.a
-                className="mr-3 dark:fill-dark fill-light"
-                href={socialLink.facebook}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon name="facebook" />
-              </motion.a>
-              <motion.a
-                className="mr-3 dark:fill-dark fill-light"
-                href={socialLink.google}
-                target="_blank"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <Icon name="gmail" />
-              </motion.a>
+            <nav className="flex items-center justify-center flex-wrap gap-4">
+              {socialLinks.map((link) => (
+                <motion.a
+                  key={link.name}
+                  className="mr-3 dark:fill-dark fill-light"
+                  href={link.url}
+                  target="_blank"
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <Icon name={link.icon} size={44} />
+                </motion.a>
+              ))}
               <button
                 type="button"
                 className="flex items-center h-12 w-12 justify-center rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
@@ -233,69 +200,7 @@ export function Navigation() {
   );
 }
 
-// export function CustomLink({ href, title, className }) {
-//   const router = useRouter();
-//   const { setHoveringLink } = useContext(CursorContext);
-
-//   const handleMouseEnter = () => {
-//     setHoveringLink(true);
-//   };
-
-//   const handleMouseLeave = () => {
-//     setHoveringLink(false);
-//   };
-
-//   return (
-//     <Link
-//       href={href}
-//       className={`relative group ${className}`}
-//       onMouseEnter={handleMouseEnter}
-//       onMouseLeave={handleMouseLeave}
-//     >
-//       {title}
-//       <span
-//         className={`
-//             h-[1px] inline-block bg-dark dark:bg-light absolute left-0 -bottom-0.5 transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
-//           }`}
-//       />
-//     </Link>
-//   )
-// }
 
 
-// CustomLink.propTypes = {
-//   href: PropTypes.string,
-//   title: PropTypes.string,
-//   className: PropTypes.string,
-// };
 
-// function CustomMobileLink({ href, title, className, toggle }) {
-//   const router = useRouter();
 
-//   const handleClick = () => {
-//     toggle();
-//     router.push(href);
-//   };
-//   return (
-//     <button
-//       type="button"
-//       href={href}
-//       className={`${className} relative group text-light dark:text-dark`}
-//       onClick={handleClick}
-//     >
-//       {title}
-//       <span
-//         className={`
-//             h-[1px] inline-block bg-light dark:bg-dark absolute left-0 -bottom-0.5 group-hover:w-full transition-[width] ease duration-300 ${router.asPath === href ? 'w-full' : 'w-0'
-//           }`}
-//       />
-//     </button>
-//   );
-// }
-
-// CustomMobileLink.propTypes = {
-//   href: PropTypes.string,
-//   title: PropTypes.string,
-//   className: PropTypes.string,
-//   toggle: PropTypes.func,
-// };
