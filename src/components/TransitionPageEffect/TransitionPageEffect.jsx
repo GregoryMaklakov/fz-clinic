@@ -9,7 +9,7 @@ export function TransitionPageEffect() {
                 animate={{ x: "0%", width: "0%" }}
                 exit={{ x: ["0%", "100%"], width: ["-100%", "100%"] }}
                 transition={{ duration: 0.8, ease: "easeInOut" }} >
-                <Icon name="fz" size={100} />
+                <Icon name="fz-clinic" size={100} />
             </motion.div>
             <motion.div className="fixed bottom-0 top-0 right-full w-screen h-screen z-[90] bg-dark dark:bg-light"
                 initial={{ x: "100%", width: "100%" }}

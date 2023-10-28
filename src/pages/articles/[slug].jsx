@@ -10,7 +10,8 @@ import {
   TransitionPageEffect,
   Accordion,
   ServicesAdvantages,
-  ServicesTitle
+  ServicesTitle,
+  ButtonBack
 } from "../../components";
 import { articles } from "../../lib";
 
@@ -58,14 +59,17 @@ function ArticlePage() {
       <TransitionPageEffect />
       <section className="flex w-full flex-col items-center justify-center dark:text-light text-dark">
         <Layout className="pt-8">
-          <h1 className="w-full mx-auto py-2 flex items-center justify-center text-center sm:py-0 font-bold capitalize text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-16">
-            {article.title}
-          </h1>
+          <div className="flex items-start lg:flex-col">
+            <ButtonBack className="mr-4 lg:mr-0 lg:mb-4" />
+            <h1 className="w-full mx-auto flex items-center justify-center text-center sm:py-0 font-bold capitalize text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-16">
+              {article.title}
+            </h1>
+          </div>
           <div className="grid w-full grid-cols-8 gap-16 lg:gap-6 sm:gap-8 items-center">
             <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
               {article.text &&
                 article.text.map(text => (
-                  <p key={text} className="my-4 font-medium max-w-[480px]">
+                  <p key={text} className="my-4 font-medium max-w-[480px] lg:max-w-full">
                     {text}
                   </p>
                 ))}
@@ -123,6 +127,7 @@ function ArticlePage() {
           {article.servicesTextRight && (
             <ServicesTextRight data={article.servicesTextRight} />
           )}
+          <ButtonBack className="my-12" label="всі послуги" />
         </Layout>
       </section>
     </>
@@ -130,3 +135,9 @@ function ArticlePage() {
 }
 
 export default ArticlePage;
+
+
+
+
+
+

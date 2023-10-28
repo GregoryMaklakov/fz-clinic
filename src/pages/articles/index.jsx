@@ -4,6 +4,12 @@ import PropTypes from "prop-types";
 import { AnimatedText, Layout, TransitionPageEffect, ArticleCard, Tag } from "../../components";
 import { articles } from "../../lib";
 
+const tagData = [
+    { category: 'COSMETOLOGY', count: 5 },
+    { category: 'DENTAL', count: 6 },
+    { category: 'ALL', count: 11 }
+];
+
 export default function Articles({ summary }) {
     const [filter, setFilter] = useState('ALL');
 
@@ -27,13 +33,17 @@ export default function Articles({ summary }) {
                 <Layout className="w-full max-w-[1920px] mx-auto h-full bg-light dark:bg-dark inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 py-10">
                     <AnimatedText text="Дізнайтесь більше про наші послуги!"
                         className="mb-16 xl:text-6xl lg:text-5xl xs:text-3xl xs:mb-12" />
-                    <div>
-                        <ul className="flex flex-wrap items-center py-12 gap-4">
-                            <Tag onClick={() => setFilter('COSMETOLOGY')} category="COSMETOLOGY" count={5} active={filter === 'COSMETOLOGY'} />
-                            <Tag onClick={() => setFilter('DENTAL')} category="DENTAL" count={6} active={filter === 'DENTAL'} />
-                            <Tag onClick={() => setFilter('ALL')} category="ALL" count={11} active={filter === 'ALL'} />
-                        </ul>
-                    </div>
+                    <ul className="flex flex-wrap items-center py-12 gap-4">
+                        {tagData.map((tag) => (
+                            <Tag
+                                key={tag.category}
+                                onClick={() => setFilter(tag.category)}
+                                category={tag.category}
+                                count={tag.count}
+                                active={filter === tag.category}
+                            />
+                        ))}
+                    </ul>
                     <ul className="grid grid-cols-3 gap-16 mb-16 md:grid-cols-1 2xl:grid-cols-2">
                         {articles
                             .filter((article) => (filter === 'ALL' ? true : article.tags.includes(filter)))

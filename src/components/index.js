@@ -17,3 +17,4 @@ export * from "./FlippedText";
 export * from "./Employee";
 export * from "./ArticlesBlock";
 export * from "./Tag";
+export * from "./ButtonBack";

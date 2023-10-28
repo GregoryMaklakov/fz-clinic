@@ -6,10 +6,10 @@ export function Tag({ category, count, onClick, active }) {
             <button
                 type="button"
                 onClick={onClick}
-                className={`text-md font-bold dark:bg-light px-[20px] py-3 transition-all uppercase rounded-[50px] text-light dark:text-dark flex items-center justify-center gap-2 ${active ? "bg-dark/75 dark:bg-light/75" : "bg-dark"}`}
+                className={`text-md font-bold px-[20px] py-3 transition-all uppercase rounded-[50px]   flex items-center justify-center gap-2 ${active ? "dark:bg-lightGrey dark:text-dark text-light bg-dark" : "dark:bg-darkGrey dark:text-light text-dark bg-lightGrey"}`}
             >
                 <span>{category}</span>
-                <span>[{count}]</span>
+                <span>[ {count} ]</span>
             </button>
         </li>
     )
