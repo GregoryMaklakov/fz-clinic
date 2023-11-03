@@ -6,8 +6,8 @@ import { articles } from "../../lib";
 
 const tagData = [
     { category: 'COSMETOLOGY', count: 5 },
-    { category: 'DENTAL', count: 6 },
-    { category: 'ALL', count: 11 }
+    { category: 'DENTAL', count: 7 },
+    { category: 'ALL', count: 12 }
 ];
 
 export default function Articles({ summary }) {
