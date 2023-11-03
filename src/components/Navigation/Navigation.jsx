@@ -33,9 +33,9 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: "insta", url: socialLink.instagram, icon: "insta" },
-  { name: "facebook", url: socialLink.facebook, icon: "facebook" },
-  { name: "gmail", url: socialLink.google, icon: "gmail" },
+  { name: "insta", url: socialLink.instagram, icon: "insta", ariaLabel: "instagram" },
+  { name: "facebook", url: socialLink.facebook, icon: "facebook", ariaLabel: "facebook" },
+  { name: "gmail", url: socialLink.google, icon: "gmail", ariaLabel: "gmail" },
 ];
 export function Navigation() {
 
@@ -122,6 +122,7 @@ export function Navigation() {
               whileTap={{ scale: 0.9 }}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              aria-label={link.ariaLabel}
             >
               <Icon name={link.name} />
             </motion.a>
@@ -129,6 +130,7 @@ export function Navigation() {
           <button
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            aria-label='theme-button-switcher'
             type="button"
             className="flex items-center justify-center h-8 w-8 rounded-full p-1 bg-dark text-light dark:bg-light dark:text-dark"
             onClick={toggleTheme}
@@ -171,6 +173,7 @@ export function Navigation() {
                   target="_blank"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.9 }}
+                  aria-label={link.ariaLabel}
                 >
                   <Icon name={link.icon} size={44} />
                 </motion.a>

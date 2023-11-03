@@ -57,7 +57,7 @@ function ArticlePage() {
         <meta property="business:contact_data:country_name" content="Ukraine" />
       </Head>
       <TransitionPageEffect />
-      <section className="flex w-full flex-col items-center justify-center dark:text-light text-dark">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light text-dark">
         <Layout className="pt-8">
           <div className="flex items-start lg:flex-col">
             <ButtonBack className="mr-4 lg:mr-0 lg:mb-4" />
@@ -129,7 +129,7 @@ function ArticlePage() {
           )}
           <ButtonBack className="my-12" label="всі послуги" />
         </Layout>
-      </section>
+      </main>
     </>
   );
 }

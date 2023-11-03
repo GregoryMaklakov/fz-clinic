@@ -60,7 +60,7 @@ export default function About() {
         <meta property="business:contact_data:country_name" content="Ukraine" />
       </Head>
       <TransitionPageEffect />
-      <section className="flex w-full flex-col items-center justify-center dark:text-light">
+      <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-8">
           <AnimatedText
             text="Дізнайтеся більше про нас"
@@ -166,7 +166,7 @@ export default function About() {
             </div>
           </div>
         </Layout>
-      </section>
+      </main>
     </>
   );
 }

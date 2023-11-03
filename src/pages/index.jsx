@@ -49,7 +49,7 @@ export default function Home() {
       </Head>
 
       <TransitionPageEffect />
-      <main className="">
+      <main className="main-home">
         <section className={`flex w-full flex-col items-center justify-center min-h-[100vh] bg-cover bg-center bg-no-repeat ${mode === 'light' ? '' : 'bg-[url("../../public/images/home/hero03.webp")] md:bg-[url("../../public/images/home/hero03-md.webp")]'
           }`}>
           <div className="w-full max-w-[1920px] mx-auto h-full inline-block z-0 p-32 xl:p-24 lg:p-16 lg:pt-0 md:p-12 sm:p-6 pt-0 pb-16 md:pt-16 sm:pt-0 sm:pb-16">
@@ -115,17 +115,3 @@ export default function Home() {
     </>
   );
 }
-
-/* 
-<meta property="og:type" content="business.business">
-<meta property="og:title" content="FZ Clinic">
-<meta property="og:url" content="">
-<meta property="og:image" content="https://i.ibb.co/7jSCrpk/Xnip2023-10-28-14-42-45-1.jpg">
-<meta property="og:description" content="Краса та здоров'я разом в FZ Clinic! Косметологія і стоматологія - Кременчуг">
-<meta property="business:contact_data:street_address" content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600">
-<meta property="business:contact_data:locality" content="Kremenchuk">
-<meta property="business:contact_data:region" content="Poltava">
-<meta property="business:contact_data:postal_code" content="39600">
-<meta property="business:contact_data:country_name" content="Ukraine">
-
-*/
