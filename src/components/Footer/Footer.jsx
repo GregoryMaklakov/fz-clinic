@@ -46,7 +46,7 @@ export function Footer() {
                         </div>
 
                         <div className="col-span-1 flex flex-col justify-between pb-8">
-                            <div className="flex items-end">
+                            <div className="flex items-end justify-between max-w-[290px]">
                                 <div>
                                     <h3 className="font-bold mb-2">Години роботи</h3>
                                     <ul className="">
@@ -61,10 +61,8 @@ export function Footer() {
                                     ))}
                                 </ul>
                             </div>
-                            <Link href="tel:380987775580" className="">
-                                <span className="hover:underline"> tel: +38 098 777 55 80</span>
-                            </Link>
-                            <div className="flex">
+
+                            <div className="flex items-center">
                                 {socialLinks.map(link => (
                                     <motion.a
                                         key={link.name}
@@ -80,6 +78,9 @@ export function Footer() {
                                         <Icon name={link.name} />
                                     </motion.a>
                                 ))}
+                                <Link href="tel:380987775580" className="">
+                                    <span className="hover:underline"> tel: +38 098 777 55 80</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
