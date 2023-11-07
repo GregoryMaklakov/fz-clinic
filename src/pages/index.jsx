@@ -58,7 +58,7 @@ export default function Home() {
                 <CursorContext.Consumer>
                   {({ isHoveringText }) => (
                     <div
-                      className={`inline-flex flex-col gap-2 w-full font-bold capitalize text-left text-6xl xl:text-4xl  ${isHoveringText
+                      className={`inline-flex flex-col gap-2 w-full font-bold capitalize text-left text-8xl 2xl:text-6xl xl:text-4xl ${isHoveringText
                         ? "text-dark bg-inherit dark:bg-inherit dark:text-light"
                         : "text-dark dark:bg-inherit dark:text-light"
                         } md:text-4xl dark:bg-inherit text-dark dark:text-light`}

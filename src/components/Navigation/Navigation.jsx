@@ -9,7 +9,7 @@ import { CursorContext, ThemeContext } from '../../lib/context';
 import { CustomMobileLink } from './CustomMobileLink';
 import { CustomLink } from './CustomLink';
 
-const navLinks = [
+export const navLinks = [
   {
     id: 1,
     href: Routes.HOME,
@@ -32,7 +32,7 @@ const navLinks = [
   },
 ];
 
-const socialLinks = [
+export const socialLinks = [
   { name: "insta", url: socialLink.instagram, icon: "insta", ariaLabel: "instagram" },
   { name: "facebook", url: socialLink.facebook, icon: "facebook", ariaLabel: "facebook" },
   { name: "gmail", url: socialLink.google, icon: "gmail", ariaLabel: "gmail" },
