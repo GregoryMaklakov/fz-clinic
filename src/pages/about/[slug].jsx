@@ -48,7 +48,7 @@ function EmployeePage() {
         <meta property="business:contact_data:country_name" content="Ukraine" />
       </Head>
       <TransitionPageEffect />
-      <section className="flex w-full flex-col items-center justify-center dark:text-light text-dark h-[100vh]">
+      <section className="flex w-full flex-col items-center justify-center dark:text-light text-dark">
         <Layout className="pt-8">
           <div className="flex flex-col justify-center items-center">
             <h1 className="w-full mx-auto py-2 flex items-center justify-center text-center sm:py-0 font-bold capitalize text-8xl xl:text-6xl lg:text-5xl xs:text-3xl mb-4">
@@ -59,11 +59,11 @@ function EmployeePage() {
             </h2>
           </div>
           <div className="grid w-full grid-cols-8 gap-16 lg:gap-6 sm:gap-8 items-center">
-            <div className="col-span-4 xl:col-span-4 flex flex-col items-start justify-start md:order-2 lg:col-span-8">
-              <h1 className="col-span-4 text-bold text-2xl">Розділ про нашу команду знаходиться в стадії розробки. Незабаром тут буде доступна інформація про кваліфікацію, освіту та навички наших спеціалістів!</h1>
+            <div className="col-span-4 flex flex-col items-start justify-start  lg:col-span-8">
+              <h1 className="col-span-4 text-bold text-2xl lg:py-16">Розділ про нашу команду знаходиться в стадії розробки. Незабаром тут буде доступна інформація про кваліфікацію, освіту та навички наших спеціалістів!</h1>
             </div>
 
-            <FrameWhiteBlack className="col-span-4 min-h-[450px] xl:col-span-4 md:order-1 lg:col-span-8 h-auto lg:min-h-[450px]">
+            <FrameWhiteBlack className="col-span-4 min-h-[450px] lg:col-span-8 h-auto lg:min-h-[450px]">
               <Image
                 src={employee.imageSrc}
                 alt="BlackLady"
