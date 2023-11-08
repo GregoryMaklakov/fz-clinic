@@ -46,7 +46,7 @@ export default function Price() {
       ),
     },
   ];
-  const textVariants = ["Стоматологія", "BEAUTY", "HEALTH", "SMILE", "SKIN", "CARE", "TOOTH", "LIPS", "FACE", "GLOW", "TEETH", "PURE", "HEAL", "SHINE"];
+  const textVariants = ["BEAUTY", "HEALTH", "SMILE", "SKIN", "CARE", "TOOTH", "LIPS", "FACE", "GLOW", "TEETH", "PURE", "HEAL", "SHINE"];
 
   return (
     <>
