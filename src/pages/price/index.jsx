@@ -79,7 +79,7 @@ export default function Price() {
               33vw"
             />
             <div className="w-1/3 lg:w-full z-50 flex items-center justify-center text-light text-6xl xl:text-4xl my-4">
-              <FlippedText textVariants={textVariants} />
+              <FlippedText textVariants={textVariants} className="text-light" />
             </div>
             <div className="flex flex-col w-2/3 p-8 lg:w-full lg:text-center lg:pt-0">
               <CursorContext.Consumer>

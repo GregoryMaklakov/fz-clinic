@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState, useRef } from "react";
 import { textScramble } from "../../lib/textScramble";
 
-export function FlippedText({ textVariants }) {
+export function FlippedText({ textVariants, className }) {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const textElementRef = useRef(null);
 
@@ -25,7 +25,7 @@ export function FlippedText({ textVariants }) {
     }, [currentTextIndex, textVariants]);
 
     return (
-        <div className="inline-block text-dark/75 dark:text-light/75 border-solid border-2 rounded-[2rem] py-2 px-4 border-primary/75 capitalize">
+        <div className={`inline-block text-dark/75 dark:text-light/75 border-solid border-2 rounded-[2rem] py-2 px-4 border-primary/75 capitalize ${className}`}>
             <span ref={textElementRef} />
         </div>
     );
@@ -33,4 +33,5 @@ export function FlippedText({ textVariants }) {
 
 FlippedText.propTypes = {
     textVariants: PropTypes.arrayOf(PropTypes.string).isRequired,
+    className: PropTypes.string,
 }
