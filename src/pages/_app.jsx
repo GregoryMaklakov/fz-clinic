@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import PropTypes from 'prop-types';
 import Head from "next/head";
+import Script from 'next/script';
 import { Nunito } from 'next/font/google';
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from 'next/router';
@@ -48,6 +49,17 @@ export default function App({ Component, pageProps, }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        id="googleAn"
+        srtategy="lazyOnload">
+        {`
+          window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          
+            gtag('config', 'G-E89QSCN46Y');`
+        }
+      </Script>
       <CursorContext.Provider value={contextValue.cursor}>
         <ThemeContext.Provider value={contextValue.theme}>
           <CustomCursor />
