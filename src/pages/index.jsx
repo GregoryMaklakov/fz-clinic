@@ -94,7 +94,7 @@ export default function Home() {
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                   >
-                    Отримай знижку 20%
+                    Отримай знижку 10%
                     <Icon name="linkArrow" size={24} className="ml-2" />
                   </Link>
                   <Link
