@@ -50,6 +50,10 @@ export default function App({ Component, pageProps, }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script
+        srtategy="lazyOnload"
+        src="https://www.googletagmanager.com/gtag/js?id=G-E89QSCN46Y"
+      />
+      <Script
         id="googleAn"
         srtategy="lazyOnload">
         {`
