@@ -110,12 +110,15 @@ export function Footer() {
                         target="_blank"
                     >
                         <span className="underline underline-offset-2">
-                            Першотравнева 51
-                        </span>{" "}
-                        | Кременчук
+                            Старшого Лейтенанта Кагала 51
+                        </span>
+                        <span className="xl:hidden">(колишня Першотравнева 51)</span>
                     </Link>
                 </div>
             </div>
         </footer >
     );
 }
+
+/* И адрес 
+Вул.Старшого Лейтенанта Кагала 51(колишня Першотравнева 51) */

@@ -110,7 +110,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <BooksyButton className="fixed left-4 bottom-2 lg:bottom-0 lg:left-0" />
+        <BooksyButton className="fixed right-4 bottom-2 lg:bottom-0" />
       </main>
     </>
   );
