@@ -35,7 +35,7 @@ function ArticlePage() {
         <title>FZ Clinic | Послуги</title>
         <meta
           name="description"
-          content="Краса та здоров'я разом в FZ Clinic"
+          content="Стоматологія та косметологія Кременчуг"
         />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content="Про нас | FZ Clinic" />

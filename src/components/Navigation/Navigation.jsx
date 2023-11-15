@@ -37,6 +37,7 @@ export const socialLinks = [
   { name: "facebook", url: socialLink.facebook, icon: "facebook", ariaLabel: "facebook" },
   { name: "gmail", url: socialLink.google, icon: "gmail", ariaLabel: "gmail" },
 ];
+
 export function Navigation() {
 
   const { mode, toggleTheme } = useContext(ThemeContext);

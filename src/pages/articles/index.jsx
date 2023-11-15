@@ -17,7 +17,7 @@ export default function Articles({ summary }) {
         <>
             <Head>
                 <title>FZ Clinic | Послуги</title>
-                <meta name="description" content="Краса та здоров'я разом в FZ Clinic" />
+                <meta name="description" content="Краса та здоров'я разом в FZ Clinic. Перелік послуг стоматології та косметології." />
                 <meta property="og:type" content="business.business" />
                 <meta property="og:title" content="Про нас | FZ Clinic" />
                 <meta property="og:url" content="https://ginger-beauty-zone.com" />

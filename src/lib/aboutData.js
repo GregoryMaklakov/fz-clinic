@@ -36,7 +36,7 @@ export const employeeData = [
     slug: "katerina-shandra",
     id: 2,
     name: "Катерина Шандра",
-    position: "Лікар косметологтолог",
+    position: "Лікар косметолог",
     instaLink: "https://www.instagram.com/dr.katerinabella/",
     imageSrc: "/images/about/about-kate.webp",
   },

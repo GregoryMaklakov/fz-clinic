@@ -52,7 +52,7 @@ export default function Price() {
     <>
       <Head>
         <title>FZ Clinic | Прайс</title>
-        <meta name="description" content="Краса та здоров'я разом в FZ Clinic" />
+        <meta name="description" content="Краса та здоров'я разом в FZ Clinic. Стоматолог/ Косметолог/ Кременчуг" />
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content="Прайс | FZ Clinic" />
         <meta property="og:url" content="https://ginger-beauty-zone.com" />
