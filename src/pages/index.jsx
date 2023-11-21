@@ -40,7 +40,7 @@ export default function Home() {
         <meta property="og:title" content="FZ Clinic" />
         <meta property="og:url" content="" />
         <meta property="og:image" content="https://i.ibb.co/7jSCrpk/Xnip2023-10-28-14-42-45-1.jpg" />
-        <meta property="og:description" content="Краса та здоров'я разом в FZ Clinic! Косметологія і стоматологія - Кременчуг" />
+        <meta property="og:description" content="Краса та здоров'я разом в FZ Clinic! Косметологія і стоматологія - Кременчук" />
         <meta property="business:contact_data:street_address" content="Першотравнева вулиця, 51, Кременчук, Полтавська область, Украина, 39600" />
         <meta property="business:contact_data:locality" content="Kremenchuk" />
         <meta property="business:contact_data:region" content="Poltava" />
