@@ -19,11 +19,11 @@ export function PriceItem({ name, price, description, priceUsd }) {
                         {price.min}-{price.max} UAH
                     </span>
                 ) : (
-                    <span className="capitalize text-primary font-bold xs:text-xs xs:text-right">
+                    <span className="text-primary font-bold xs:text-xs xs:text-right">
                         {priceUsd !== undefined && priceUsd !== null ? (
                             `${priceUsd} $`
                         ) : (
-                            `${price} UAH`
+                            `${price} грн`
                         )}
                     </span>
                 )}
