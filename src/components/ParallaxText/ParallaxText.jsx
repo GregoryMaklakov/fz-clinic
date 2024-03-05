@@ -1,6 +1,5 @@
 import { PropTypes } from "prop-types";
 import { useRef } from "react";
-import Link from "next/link";
 import {
     motion,
     useScroll,

@@ -6,7 +6,7 @@ import { CursorContext } from "../../lib/context";
 import { Icon } from "../Icons";
 import { CustomLink, navLinks, socialLinks } from "../Navigation";
 import { GradientText } from "../GradientText";
-import { ParallaxText } from "../ParallaxText";
+// import { ParallaxText } from "../ParallaxText";
 
 const workingHours = [
     { day: 'Понеділок', time: '09:00–19:00' },
