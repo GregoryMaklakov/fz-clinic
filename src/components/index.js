@@ -19,3 +19,4 @@ export * from "./ArticlesBlock";
 export * from "./Tag";
 export * from "./ButtonBack";
 export * from "./GradientText";
+export * from "./ParallaxText";

@@ -311,7 +311,7 @@ export const priceCosmetology = [
       {
         id: 3,
         name: "Mesoeye c11",
-        priceUsd: 150, // ? в $
+        price: 5000, // од 5000
       },
     ],
   },
