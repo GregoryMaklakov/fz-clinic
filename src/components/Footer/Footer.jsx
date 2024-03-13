@@ -6,7 +6,6 @@ import { CursorContext } from "../../lib/context";
 import { Icon } from "../Icons";
 import { CustomLink, navLinks, socialLinks } from "../Navigation";
 import { GradientText } from "../GradientText";
-import { ParallaxText } from "../ParallaxText";
 
 const workingHours = [
     { day: 'Понеділок', time: '09:00–19:00' },
@@ -36,7 +35,6 @@ export function Footer() {
     return (
         <footer className=" overflow-hidden w-full max-w-[1920px] z-[100] block mx-auto bg-light dark:bg-dark py-12 px-32 lg:px-16 md:px-6">
 
-            {/* <ParallaxText className="pt-24" baseVelocity={-200} count={2}>Самолікування може бути шкідливим для вашого здоров’я</ParallaxText> */}
             <GradientText lines={[warmingHealth.line01, warmingHealth.line02]} className="text-6xl flex flex-col items-center justify-center text-center py-6 text-[5rem] xl:text-4xl lg:text-3xl xs:text-2xl" />
             <div className="min-w-full mx-auto inline-block dark:bg-light bg-dark p-8 text-light/75 dark:text-dark rounded-3xl">
                 <div className="footer-top grid w-full grid-cols-2 xl:flex xl:flex-col-reverse">
