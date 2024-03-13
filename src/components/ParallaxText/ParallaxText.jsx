@@ -13,7 +13,6 @@ import {
 import { Logo } from "../Logo";
 
 export function ParallaxText({
-
     baseVelocity,
     className,
     children,
@@ -63,7 +62,7 @@ export function ParallaxText({
                     <span className="flex items-center gap-6" key={index}>
                         {span}
                         <Logo
-                            size={44}
+                            size={42}
                             className="mr-6 fill-dark dark:fill-light dark:group-hover:fill-gradientTo group-hover:fill-gradientFrom"
                         />
                     </span>
