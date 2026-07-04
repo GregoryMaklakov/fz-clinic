@@ -14,7 +14,7 @@ export const priceDental = [
         id: 2,
         name: "Cкладання плану лікування та повне обстеження",
         price: 700,
-        // description: " "
+
       },
     ],
   },
